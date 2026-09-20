@@ -104,9 +104,35 @@ const COURSES = [
       ]
     ],
     "books": [],
-    "chapters": [],
+      chapters: [
+          ["Lecture 1", "Software Engineering", "file/cs383/chapters/CS383Lecture1.pdf"],
+          ["Lecture 2", "Software Engineering", "file/cs383/chapters/CS383Lecture2.pdf"],
+          ["Lecture 3", "Software Engineering", "file/cs383/chapters/CS383Lecture3.pdf"],
+          ["Lecture 4", "Software Engineering", "file/cs383/chapters/CS383Lecture4.pdf"],
+          ["Lecture 5", "Software Engineering", "file/cs383/chapters/CS383Lecture5.pdf"],
+          ["Lecture 6", "Software Engineering", "file/cs383/chapters/CS383Lecture6.pdf"],
+          ["Lecture 7", "Software Engineering", "file/cs383/chapters/CS383Lecture7.pdf"],
+          ["Lecture 8", "Software Engineering", "file/cs383/chapters/CS383Lecture8.pdf"],
+          ["Lecture 9", "Software Engineering", "file/cs383/chapters/CS383Lecture9.pdf"],
+          ["Lecture 10", "Software Engineering", "file/cs383/chapters/CS383Lecture10.pdf"],
+          ["Lecture 11", "Software Engineering", "file/cs383/chapters/CS383Lecture11.pdf"],
+          ["Lecture 12", "Software Engineering", "file/cs383/chapters/CS383Lecture12.pdf"],
+          ["Lecture 13", "Software Engineering", "file/cs383/chapters/CS383Lecture13.pdf"],
+          ["Lecture 14", "Software Engineering", "file/cs383/chapters/CS383Lecture14.pdf"],
+          ["Lecture 14 Solutions", "Solutions", "file/cs383/chapters/CS383Lecture14Solutions.pdf"],
+          ["Lecture 15", "Software Engineering", "file/cs383/chapters/CS383Lecture15.pdf"],
+          ["Lecture 16", "Software Engineering", "file/cs383/chapters/CS383Lecture16.pdf"],
+          ["Lecture 17", "Software Engineering", "file/cs383/chapters/CS383Lecture17.pdf"],
+          ["Lecture 18", "Software Engineering", "file/cs383/chapters/CS383Lecture18.pdf"],
+          ["Lecture 19", "Software Engineering", "file/cs383/chapters/CS383Lecture19.pdf"],
+          ["Lecture 20", "Software Engineering", "file/cs383/chapters/CS383Lecture20.pdf"]
+      ],
     "files": [],
-    "exams": []
+      exams: [
+          ["Mid 461 - Solved", "نموذج ميد محلول", "file/cs383/exams/ميد هندسة برمجيات ٤٦١ محلول.pdf"],
+          ["Mid CS383 - 462", "نموذج ميد", "file/cs383/exams/MidCS383-462.pdf"],
+          ["Mid 471", "نموذج ميد", "file/cs383/exams/ميد هندسة 471.pdf"]
+      ],
   },
   {
     "id": "math329",
@@ -310,9 +336,12 @@ const COURSES = [
 const app=document.querySelector("#app");
 function searchable(c){return [c.code,c.name,c.en,...c.resources.flat(),...c.practice.flat(),...c.books.flat()].join(" ").toLowerCase()}
 function home() {
-    document.title = "دليلك للفل 7";
+    document.title = "دليلك للمستولى السابع";
 
-    app.innerHTML = `<section class="hero"><div class="kicker">LEVEL 07 / ONE PLACE</div><h1>دليلك <em>للفل 7</em></h1><p>كل ما تحتاجه لمواد الفل 7 في مكان واحد.</p><div class="search"><span>⌕</span><input id="search" placeholder="ابحث باسم المادة أو رمزها أو أحد المصادر..."></div></section><section class="titlebar"><div><small>COURSES</small><h2>مواد الفل 7</h2></div><span id="resultCount"></span></section><div id="cards" class="cards"></div>`;
+    app.innerHTML = `<section class="hero"><div class="kicker">LEVEL 07 / ONE PLACE</div><h1>دليلك <em>للمستوى السابع
+    </em></h1><p>كل ما تحتاجه لمواد المستوى السابع في مكان واحد.</p><div class="search"><span>⌕</span><input
+    id="search" placeholder="ابحث باسم المادة أو رمزها أو أحد المصادر..."></div></section><section class="titlebar">
+    <div><small>COURSES</small><h2>مواد المستوى السابع</h2></div><span id="resultCount"></span></section><div id="cards" class="cards"></div>`;
 
     const cards = document.querySelector("#cards"), q = document.querySelector("#search"), rc = document.querySelector("#resultCount");
 
