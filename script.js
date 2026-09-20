@@ -431,9 +431,51 @@ const COURSES = [
     ],
     "practice": [],
     "books": [],
-    "chapters": [],
+      "chapters": [
+          [
+              "Chapter 1",
+              "file/cs342/chapters/chapter1.pptx"
+          ], ,
+          [
+              "Code 01 — TestHoliday",
+              "file/cs342/chapters/اكواد د.هادية/TestHoliday.txt"
+          ],
+          [
+              "Code 02 — class Movie",
+              "file/cs342/chapters/اكواد د.هادية/class Movie.txt"
+          ],
+          [
+              "Code 03 — class testMovie",
+              "file/cs342/chapters/اكواد د.هادية/class testMovie.txt"
+          ],
+          [
+              "Code 04 — Holiday",
+              "file/cs342/chapters/اكواد د.هادية/Holiday.txt"
+          ]
+      ],
     "files": [],
-    "exams": []
+      "exams": [
+          [
+              "Midterm 461",
+              "file/cs342/exams/ميد البرمجة المرئية 461💗.pdf"
+          ],
+          [
+              "Midterm 462",
+              "file/cs342/exams/Mid CS 342 - 462.pdf"
+          ],
+          [
+              "Midterm 471",
+              "file/cs342/exams/_⁨ميد برمجة مرئية 471 ⁩.pdf"
+          ],
+          [
+              "Midterm 471 — Solution",
+              "file/cs342/exams/mid 471 ( محلول ) .pdf"
+          ],
+          [
+              "كود مراجعة د. هادية",
+              "file/cs342/exams/ميد البرمجة المرئية 461💗.pdf"
+          ]
+      ]
   },
   {
     "id": "course6",
