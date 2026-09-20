@@ -186,11 +186,70 @@ const COURSES = [
         "https://t.me/COC_7_moves/15/404"
       ]
     ],
-    "practice": [],
+      "practice": [[
+          "ملخص نظري",
+          "Telegram",
+          "https://t.me/COC_7_moves/15/603?single" ],
+      [
+          "ملخص ",
+          "Telegram",
+          "https://t.me/COC_7_moves/15/720"],
+      [
+      "مراجعة جزئية الميد",
+      "Telegram",
+      "https://t.me/COC_7_moves/15/1021"]
+      ],
     "books": [],
-    "chapters": [],
+      "chapters": [
+          [
+              "Lecture 01",
+              "file/math329/chapters/Lecture01.pdf"
+          ],
+          [
+              "Lecture 02",
+              "file/math329/chapters/Lecture02.pdf"
+          ],
+          [
+              "Lecture 03",
+              "file/math329/chapters/Lecture03.pdf"
+          ],
+          [
+              "Lecture 04",
+              "file/math329/chapters/Lecture04.pdf"
+          ],
+          [
+              "Lecture 05",
+              "file/math329/chapters/Lecture05.pdf"
+          ],
+          [
+              "Lecture 06",
+              "file/math329/chapters/Lecture06.pdf"
+          ]
+      ],
     "files": [],
-    "exams": []
+      "exams": [
+          [
+              "Midterm 441",
+              "file/math329/exams/MID - 441 - MATH329 (1).pdf"
+          ],
+          [
+              "Midterm 451",
+              "file/math329/exams/Mid Exam term-451-Math329.pdf.pdf"
+          ],
+          [
+              "Midterm 461",
+              "file/math329/exams/mid 461 -بحوث العمليات .pdf"
+          ],
+          [
+              "Midterm 462",
+              "file/math329/exams/mid 462 Solution-بحوث العمليات .pdf"
+          ],
+          [
+              "Midterm 472",
+              "file/math329/exams/MATH319 MIDTERM 472.pdf"
+          ]
+      ]
+
   },
   {
     "id": "math317",
