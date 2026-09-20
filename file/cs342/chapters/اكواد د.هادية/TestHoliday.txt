@@ -1,0 +1,33 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package exercise1;
+
+/**
+ *
+ * @author pc5
+ */
+public class TestHoliday {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        
+        Holiday hd[]=new Holiday[3];
+        hd[0]=new Holiday("Vacation1",6,"November");
+         hd[1]=new Holiday("Vacation2","November");
+         hd[2]=new Holiday("Vacation3");
+         
+         System.out.println("testing month: Hd[0] and Hd[1] are "+((hd[0].sameMonth(hd[2]))?"equal":"not equal"));
+         
+         System.out.println("the avg of days= "+hd[2].avgDay(hd));
+        
+        
+        
+    }
+    
+}

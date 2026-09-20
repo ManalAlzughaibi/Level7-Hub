@@ -1,0 +1,48 @@
+* To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package exercise1;
+
+/**
+ *
+ * @author pc5
+ */
+public class Holiday {
+    
+    private String name;
+    private int day;
+    private String month;
+
+    public Holiday(String name, int day, String month) {
+        this.name = name;
+        this.day = day;
+        this.month = month;
+    }
+
+    public Holiday(String name, String month) {
+        this.name = name;
+        this.month = month;
+        this.day=7;
+       
+    }
+
+    public Holiday(String name) {
+        this.name = name;
+        this.day=23;
+        this.month="September";
+    }
+    
+    public boolean sameMonth (Holiday h)
+    {
+        return this.month.equals(h.month);
+    }
+    
+    double avgDay(Holiday [] hol)
+    {
+        int sum=0;
+        for(int i=0;i<hol.length;i++)
+            sum+=hol[i].day;
+        return ((double)sum/hol.length);
+    }
+}

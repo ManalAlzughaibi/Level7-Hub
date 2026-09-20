@@ -1,0 +1,30 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
+ */
+
+package com.mycompany.testmovie;
+
+/**
+ *
+ * @author pc5
+ */
+public class TestMovie {
+
+    public static void main(String[] args) {
+       Movie m = new Movie("casino royale", "Eon Productions", "PG-13");  
+       Movie M[]= new Movie[3];
+       M[0]=new Movie("Movie 1","Studio1","FFFF");
+       M[1]=new Movie("Movie 2","Studio2");
+       M[2]=new Movie("Movie 3","Studio3");
+    
+    
+    Movie [] B= m.getPG(M);
+    
+    for(int i=0;i<B.length; i++){
+       if(B[i] != null) 
+           System.out.println(B[i]);
+    }
+       
+}
+}

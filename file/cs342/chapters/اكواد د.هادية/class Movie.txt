@@ -1,0 +1,47 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.testmovie;
+
+/**
+ *
+ * @author pc5
+ */
+public class Movie {
+    
+    private String title;
+    private String studio;
+    private String rating;
+
+    public Movie(String title, String studio, String rating) {
+        this.title = title;
+        this.studio= studio;
+        this.rating = rating;
+    }
+    
+    public Movie(String title, String studio) {
+        this.title = title;
+        this.studio= studio;
+        this.rating = "PG";
+    }
+    
+    public Movie [] getPG (Movie []T)
+    {
+        Movie B[]= new Movie [T.length];
+        int n=0;
+        for(int i=0;i<T.length;i++)
+            if(T[i].rating.equals("PG"))
+                B[n++]=T[i];
+        
+        return B;
+    }
+
+    @Override
+    public String toString() {
+        return "Movie{" + "title=" + title + ", studio=" + studio + ", rating=" + rating + '}';
+    }
+    
+     
+    
+}

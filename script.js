@@ -320,10 +320,67 @@ const COURSES = [
         "https://t.me/COC_7_moves/22/456"
       ]
     ],
-    "practice": [],
-    "chapters": [],
+      "practice": [
+          [
+              "مراجعة شاملة",
+              "Telegram",
+              "https://t.me/COC_7_moves/22/906"
+          ],
+          [
+          "مراجعة 2",
+          "Telegram",
+          "https://t.me/COC_7_moves/22/716"
+          ]
+      ],
+      "chapters": [
+          [
+              "Lecture 01 — Course Overview",
+              "file/math317/chapters/Numerical Methods TXTBook.pdf"
+          ],
+          [
+              "Numerical Methods TXTBook",
+              "file/math317/chapters/Lec1_Course_Overview.pdf"
+          ],
+          [
+              "Lecture 02 — Preliminary Remarks",
+              "file/math317/chapters/Lec2_Preliminary Remarks.pdf"
+          ],
+          [
+              "Lecture 03 — Review of Taylor Series",
+              "file/math317/chapters/Lec3_Review of Taylor Series.pdf"
+          ],
+          [
+              "Lecture 04 — Floating-Point Representation and Errors",
+              "file/math317/chapters/Lec4_Floating-Point Representation and Errors.pdf"
+          ],
+          [
+              "Lecture 05 — Locating Roots of Equations",
+              "file/math317/chapters/Lec5_Locating Roots of Equations 2.pdf"
+          ]
+      ],
     "files": [],
-    "exams": []
+      "exams": [
+          [
+              "Midterm 451",
+              "file/math317/exams/Math-317.pdf"
+          ],
+          [
+              "Midterm 461",
+              "file/math317/exams/Mid math317 461.pdf"
+          ],
+          [
+              "Midterm 462",
+              "file/math317/exams/MidMath317 462.pdf"
+          ],
+          [
+              "Midterm 471",
+              "file/math317/exams/M317 471.pdf"
+          ],
+          [
+              "Midterm 472",
+              "file/math317/exams/M317 472.pdf"
+          ]
+      ]
   },
   {
     "id": "cs342",
