@@ -39,9 +39,35 @@ const COURSES = [
       ]
     ],
     "books": [],
-    "chapters": [],
+        "chapters": [
+            [
+                "Lecture 1 — Analysis of Algorithms",
+                "file/cs315/chapters/Lecture 1 cs315  Analysis of Algorithms1.pptx"
+            ],
+            [
+                "Lecture 2 — Divide-and-Conquer",
+                "file/cs315/chapters/Lecture 2 cs315 Divide-and-conq.pptx"
+            ],
+            [
+                "Lecture 3 — Dictionaries and HT",
+                "file/cs315/chapters/Lecture 3 cs315  Dictionaries and HT.pptx"
+            ]
+        ],
     "files": [],
-    "exams": []
+        "exams": [
+            [
+                "Midterm 442",
+                "file/cs315/exams/ميد الهاجري ٤٤٢.pdf"
+            ],
+            [
+                "Midterm 451",
+                "file/cs315/exams/ميد الهاجري ٤٥١.pdf"
+            ],
+            [
+                "Midterm 472",
+                "file/cs315/exams/Mid CS315 -472-.pdf"
+            ]
+        ]
   },
   {
     "id": "cs383",
@@ -283,21 +309,110 @@ const COURSES = [
 ];
 const app=document.querySelector("#app");
 function searchable(c){return [c.code,c.name,c.en,...c.resources.flat(),...c.practice.flat(),...c.books.flat()].join(" ").toLowerCase()}
-function home(){
- document.title="دليلك للفل 7";
- app.innerHTML=`<section class="hero"><div class="kicker">LEVEL 07 / ONE PLACE</div><h1>دليلك <em>للفل 7</em></h1><p>كل ما تحتاجه لمواد الفل 7 في مكان واحد.</p><div class="search"><span>⌕</span><input id="search" placeholder="ابحث باسم المادة أو رمزها أو أحد المصادر..."></div></section><section class="titlebar"><div><small>COURSES</small><h2>مواد الفل 7</h2></div><span id="resultCount"></span></section><div id="cards" class="cards"></div><section class="future"><div><small>DESIGNED TO GROW</small><h2>المحتوى يكبر معك، بدون ما تتغير بنية الموقع.</h2><p>أضيفي Chapters، ملفات، نماذج، كتب ومصادر جديدة من ملف JavaScript واحد.</p></div><div class="future-grid"><b>Search<span>جاهز</span></b><b>AI Study<span>واجهة جاهزة</span></b><b>Files<span>قابل للإضافة</span></b><b>Admin<span>مرحلة لاحقة</span></b></div></section>`;
- const cards=document.querySelector("#cards"),q=document.querySelector("#search"),rc=document.querySelector("#resultCount");
- function draw(list){rc.textContent=`${list.length} مواد`;cards.innerHTML=list.map(c=>{let n=c.resources.length+c.practice.length+c.books.length;return `<a class="course-card" href="#course/${c.id}"><span class="go">↗</span><div class="code">${c.code}</div><h3>${c.name}</h3><p>${c.en}</p><span class="stats">${n?n+" مصادر مضافة":"المحتوى سيضاف لاحقًا"}</span><span class="water">${c.code}</span></a>`}).join("")}
+function home() {
+    document.title = "دليلك للفل 7";
+
+    app.innerHTML = `<section class="hero"><div class="kicker">LEVEL 07 / ONE PLACE</div><h1>دليلك <em>للفل 7</em></h1><p>كل ما تحتاجه لمواد الفل 7 في مكان واحد.</p><div class="search"><span>⌕</span><input id="search" placeholder="ابحث باسم المادة أو رمزها أو أحد المصادر..."></div></section><section class="titlebar"><div><small>COURSES</small><h2>مواد الفل 7</h2></div><span id="resultCount"></span></section><div id="cards" class="cards"></div>`;
+
+    const cards = document.querySelector("#cards"), q = document.querySelector("#search"), rc = document.querySelector("#resultCount");
+
+    function draw(list) {
+        rc.textContent = `${list.length}
+ مواد`;cards.innerHTML=list.map(c=>{let n=c.resources.length+c.practice.length+c.books.length;return `<a class="course-card" href="#course/${c.id}"><span class="go">↗</span><div class="code">${c.code}</div><h3>${c.name}</h3><p>${c.en}</p><span class="stats">${n?n+" مصادر مضافة":"المحتوى سيضاف لاحقًا"}</span><span class="water">${c.code}</span></a>`}).join("")}
  draw(COURSES);q.oninput=()=>{let s=q.value.trim().toLowerCase();draw(COURSES.filter(c=>searchable(c).includes(s)))}
 }
 function coursePage(id){
  const c=COURSES.find(x=>x.id===id); if(!c){location.hash="";return}
  document.title=`${c.code} | ${c.name}`;
- const tabs=[["chapters","📚","Chapters"],["resources","🎥","مصادر الشرح"],["files","📄","الملفات والملخصات"],["exams","📝","النماذج"],["practice","❓","أسئلة للتدريب"],["books","📖","الكتب"],["ai","✦","AI Study"]];
+    const tabs = [
+        ["chapters", "📚", "Chapters"],
+        ["resources", "🎥", "مصادر الشرح"],
+        ["exams", "📝", "النماذج"],
+        ["practice", "❓", "أسئلة للتدريب"]
+    ];
  const empty=x=>`<div class="empty"><b>${x}</b>سيتم إضافة المحتوى قريبًا.</div>`;
- const list=(a,t)=>a.length?`<div class="resource-grid">${a.map(r=>`<a class="resource" href="${r[2]}" target="_blank" rel="noopener noreferrer"><div><h3>${r[0]}</h3><p>${r[1]}</p></div><span class="ext">فتح ↗</span></a>`).join("")}</div>`:empty(t);
- app.innerHTML=`<section class="course-head"><a class="inline-back" href="#">← العودة لكل المواد</a><div class="course-code">${c.code} / LEVEL 07</div><h1>${c.name}</h1><div class="en">${c.en}</div><div class="quick"><span>${c.resources.length} مصادر شرح</span><span>${c.practice.length} تدريب</span><span>${c.books.length} كتب</span><span>محتوى يتحدث باستمرار</span></div></section><nav class="tabs">${tabs.map((t,i)=>`<button class="tab ${i?"":"active"}" data-id="${t[0]}">${t[1]} ${t[2]}</button>`).join("")}</nav><section class="panel active" id="chapters"><div class="panel-title"><i>📚</i><h2>Chapters</h2></div>${empty("محتوى الـ Chapters")}</section><section class="panel" id="resources"><div class="panel-title"><i>🎥</i><h2>مصادر الشرح</h2></div>${list(c.resources,"مصادر الشرح")}</section><section class="panel" id="files"><div class="panel-title"><i>📄</i><h2>الملفات والملخصات</h2></div>${empty("الملخصات والملفات")}</section><section class="panel" id="exams"><div class="panel-title"><i>📝</i><h2>النماذج والاختبارات السابقة</h2></div>${empty("نماذج Midterm و Final")}</section><section class="panel" id="practice"><div class="panel-title"><i>❓</i><h2>أسئلة للتدريب</h2></div>${list(c.practice,"أسئلة التدريب")}</section><section class="panel" id="books"><div class="panel-title"><i>📖</i><h2>الكتب</h2></div>${list(c.books,"كتاب المادة")}</section><section class="panel" id="ai"><div class="ai"><span class="badge">AI STUDY ASSISTANT</span><h2>Study Mode ✦</h2><p>مساعد للمذاكرة داخل المادة — ميزة إضافية وليست أساس المنصة.</p><div class="ai-actions"><div><b>Quiz Me</b><small>Chapter + Difficulty</small></div><div><b>Explain</b><small>شرح مفهوم ببساطة</small></div><div><b>Summarize</b><small>تلخيص موضوع</small></div><div><b>Study from File</b><small>رفع ملف للمذاكرة</small></div></div><div class="ai-note">هذه الواجهة جاهزة لربطها بالـ Backend والـ AI لاحقًا.</div></div></section>`;
- document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{document.querySelectorAll(".tab,.panel").forEach(x=>x.classList.remove("active"));b.classList.add("active");document.getElementById(b.dataset.id).classList.add("active")})
+    const list = (a, t) => a.length
+        ? `<div class="resource-grid">${a.map(r => {
+            const link = r.length === 2 ? r[1] : r[2];
+            const desc = r.length === 2 ? "" : r[1];
+
+            return `<a class="resource" href="${link}" target="_blank" rel="noopener noreferrer">
+            <div>
+                <h3>${r[0]}</h3>
+                ${desc ? `<p>${desc}</p>` : ""}
+            </div>
+            <span class="ext">فتح ↗</span>
+        </a>`;
+        }).join("")}</div>`
+        : empty(t);
+
+    app.innerHTML = `
+    <section class="course-head">
+        <a class="inline-back" href="#">← العودة لكل المواد</a>
+        <div class="course-code">${c.code} / LEVEL 07</div>
+        <h1>${c.name}</h1>
+        <div class="en">${c.en}</div>
+
+        <div class="quick">
+            <span>${c.resources.length} مصادر شرح</span>
+            <span>${c.practice.length} تدريب</span>
+            <span>محتوى يتحدث باستمرار</span>
+        </div>
+    </section>
+
+    <nav class="tabs">
+        ${tabs.map((t, i) => `
+            <button class="tab ${i ? "" : "active"}" data-id="${t[0]}">
+                ${t[1]} ${t[2]}
+            </button>
+        `).join("")}
+    </nav>
+
+    <section class="panel active" id="chapters">
+        <div class="panel-title">
+            <i>📚</i>
+            <h2>Chapters</h2>
+        </div>
+
+        ${list(c.chapters, "محتوى الـ Chapters")}
+    </section>
+
+    <section class="panel" id="resources">
+        <div class="panel-title">
+            <i>🎥</i>
+            <h2>مصادر الشرح</h2>
+        </div>
+
+        ${list(c.resources, "مصادر الشرح")}
+    </section>
+
+    <section class="panel" id="exams">
+        <div class="panel-title">
+            <i>📝</i>
+            <h2>النماذج والاختبارات السابقة</h2>
+        </div>
+
+        ${list(c.exams, "نماذج Midterm و Final")}
+    </section>
+
+    <section class="panel" id="practice">
+        <div class="panel-title">
+            <i>❓</i>
+            <h2>أسئلة للتدريب</h2>
+        </div>
+
+        ${list(c.practice, "أسئلة التدريب")}
+    </section>
+`;
+
+    document.querySelectorAll(".tab").forEach(b => b.onclick = () => {
+        document.querySelectorAll(".tab,.panel").forEach(x => x.classList.remove("active"));
+        b.classList.add("active");
+        document.getElementById(b.dataset.id).classList.add("active");
+    });
 }
-function route(){const m=location.hash.match(/^#course\/(.+)$/);m?coursePage(m[1]):home()}
+function route() {
+    const m = location.hash.match(/^#course\/(.+)$/); m ?
+        coursePage(m[1]) : home()
+}
 addEventListener("hashchange",route);route();
