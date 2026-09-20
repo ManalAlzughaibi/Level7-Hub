@@ -431,11 +431,11 @@ const COURSES = [
     ],
     "practice": [],
     "books": [],
-      "chapters": [
+     "chapters": [
           [
               "Chapter 1",
               "file/cs342/chapters/chapter1.pptx"
-          ], ,
+          ], 
           [
               "Code 01 — TestHoliday",
               "file/cs342/chapters/اكواد د.هادية/TestHoliday.txt"
