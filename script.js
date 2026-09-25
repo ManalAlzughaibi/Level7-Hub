@@ -130,8 +130,16 @@ const COURSES = [
     "files": [],
       exams: [
           ["Mid 461 - Solved", "نموذج ميد محلول", "file/cs383/exams/ميد هندسة برمجيات ٤٦١ محلول.pdf"],
+          [
+              "Midterm 451",
+              "file/cs383/exams/mid 451 - هندسة برمجيات .pdf"
+          ],
           ["Mid CS383 - 462", "نموذج ميد", "file/cs383/exams/MidCS383-462.pdf"],
-          ["Mid 471", "نموذج ميد", "file/cs383/exams/ميد هندسة 471.pdf"]
+          ["Mid 471", "نموذج ميد", "file/cs383/exams/ميد هندسة 471.pdf"],
+          [
+              "Midterm 471 — Solution",
+              "file/cs383/exams/_⁨ميد هندسة 471 محلول .pdf"
+          ]
       ],
   },
   {
@@ -246,7 +254,7 @@ const COURSES = [
           ],
           [
               "Midterm 472",
-              "file/math329/exams/MATH319 MIDTERM 472.pdf"
+              "file/math329/exams/Mid 472 MATH329 (2).pdf"
           ]
       ]
 
@@ -482,13 +490,60 @@ const COURSES = [
     "code": "CS341",
     "name": "الرسم بالحاسب",
     "en": "Computer Graphics",
-    "resources": [],
+      "resources": [
+          [
+              "Bresenham Line Algorithm",
+              "مصادر شرح الرسم",
+              "https://youtu.be/NXRFn1XzB9M?si=4L3exjoiL7epIQIp"
+          ],
+          [
+              "Bresenham Circle Algorithm",
+              "مصادر شرح الرسم",
+              "https://youtu.be/o6EEDMIA1eY?si=E3R84xgtxpyZbHzc"
+          ],
+          [
+              "Mid-Point Circle",
+              "مصادر شرح الرسم",
+              "https://youtu.be/devTqI6x4hY?si=sZtGC6jTj3YsAZ_o"
+          ],
+          [
+              "Geometric Transformations — Part 1",
+              "مصادر شرح الرسم",
+              "https://youtu.be/fQvVfpUm0rA?si=9ts5VlLbZHCAlhPU"
+          ],
+          [
+              "Geometric Transformations — Part 2",
+              "مصادر شرح الرسم",
+              "https://youtu.be/cfWkO9urN8k?si=9HX_uJxUgWGx3XJm"
+          ],
+          [
+              "Geometric Transformations — Part 3",
+              "مصادر شرح الرسم",
+              "https://youtu.be/IPlKEMY1Ffw?si=zci8RM88wJxrlBqj"
+          ]
+      ],
     "practice": [],
     "coming": false,
     "books": [],
-    "chapters": [],
+      "chapters": [[
+          "Chapter 1",
+          "file/cs341/chapters/Chapter 1 - Overview of Graphics Systems (2).pdf"
+      ]],
     "files": [],
-    "exams": []
+      "exams": [
+          [
+              "Midterm 461",
+              "file/cs341/exams/Mid 461 - CS341.pdf"
+          ],
+          [
+              "Midterm 462",
+              "file/cs341/exams/ميد رسم بالحاسب 462.pdf"
+          ],
+          [
+              "Midterm 472",
+              "file/cs341/exams/CS341 MID -472-.pdf"
+          ]
+      ]
   }
 ];
 const app=document.querySelector("#app");
@@ -505,7 +560,7 @@ function home() {
 
     function draw(list) {
         rc.textContent = `${list.length}
- مواد`;cards.innerHTML=list.map(c=>{let n=c.resources.length+c.practice.length+c.books.length;return `<a class="course-card" href="#course/${c.id}"><span class="go">↗</span><div class="code">${c.code}</div><h3>${c.name}</h3><p>${c.en}</p><span class="stats">${n?n+" مصادر مضافة":"المحتوى سيضاف لاحقًا"}</span><span class="water">${c.code}</span></a>`}).join("")}
+ مواد`;cards.innerHTML=list.map(c=>{let n=c.resources.length+c.practice.length+c.books.length;return `<a class="course-card" href="#course/${c.id}"><span class="go">↗</span><div class="code">${c.code}</div><h3>${c.name}</h3><p>${c.en}</p><span class="stats"></span><span class="water">${c.code}</span></a>`}).join("")}
  draw(COURSES);q.oninput=()=>{let s=q.value.trim().toLowerCase();draw(COURSES.filter(c=>searchable(c).includes(s)))}
 }
 function coursePage(id){
