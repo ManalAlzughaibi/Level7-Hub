@@ -147,7 +147,13 @@ const COURSES = [
     "code": "MATH329",
     "name": "بحوث العمليات",
     "en": "Operations Research",
-    "resources": [
+      "resources": [
+          [
+              "شرح د.هشام",
+              "YouTube",
+              "https://youtu.be/5y-oFYGP5SI?si=SOn6CP0PGnr3wEGw"
+          ],
+          
       [
         "شرح المنسق",
         "Telegram",
