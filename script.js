@@ -270,7 +270,12 @@ const COURSES = [
     "code": "MATH317",
     "name": "الطرق العددية",
     "en": "Numerical Methods",
-    "resources": [
+      "resources": [
+          [
+              "شرح د.ابراهيم",
+              "YouTube",
+              "https://youtu.be/lbmxnPxmu5E?si=hGpO-4wHFVgJI_fc"
+          ],
       [
         "قناة شرح 1",
         "YouTube Playlist",
