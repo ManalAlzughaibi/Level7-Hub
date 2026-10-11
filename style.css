@@ -929,3 +929,108 @@ footer {
         text-align: right;
     }
 }
+/* ===================================
+   PREMIUM EXAM CARDS
+=================================== */
+
+.exam-shortcuts {
+    gap: 20px;
+    margin: 15px 0 65px;
+}
+
+.exam-shortcut {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    min-height: 190px;
+    padding: 30px;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 20px;
+    color: #ffffff;
+    background: linear-gradient(135deg, #2563b8, #12417e);
+    box-shadow: 0 12px 30px rgba(21, 87, 166, 0.17);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    /* Final Exams */
+    .exam-shortcut:nth-child(2) {
+        background: linear-gradient(135deg, #172e53, #0a192e);
+        box-shadow: 0 12px 30px rgba(10, 25, 46, 0.18);
+    }
+
+    /* Decorative circle */
+    .exam-shortcut::before {
+        content: "";
+        position: absolute;
+        width: 220px;
+        height: 220px;
+        left: -70px;
+        top: -100px;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.07);
+        z-index: -1;
+    }
+
+    .exam-shortcut::after {
+        content: "?";
+        position: absolute;
+        left: 28px;
+        bottom: 26px;
+        width: 42px;
+        height: 42px;
+        display: grid;
+        place-items: center;
+        border: 1px solid rgba(255,255,255,0.25);
+        border-radius: 50%;
+        color: #ffffff;
+        font-size: 22px;
+        transition: 0.3s ease;
+    }
+
+    /* Text */
+    .exam-shortcut .exam-shortcut-label {
+        color: rgba(255,255,255,0.75);
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .exam-shortcut strong {
+        color: #ffffff;
+        font-size: clamp(25px, 3vw, 34px);
+        font-weight: 800;
+        letter-spacing: -0.5px;
+    }
+
+    .exam-shortcut .exam-shortcut-action {
+        color: rgba(255,255,255,0.9);
+        font-size: 13px;
+        margin-top: auto;
+    }
+
+    /* Hover */
+    .exam-shortcut:hover {
+        transform: translateY(-6px);
+        border-color: rgba(255,255,255,0.35);
+        box-shadow: 0 20px 45px rgba(21, 87, 166, 0.25);
+    }
+
+    .exam-shortcut:nth-child(2):hover {
+        box-shadow: 0 20px 45px rgba(10, 25, 46, 0.3);
+    }
+
+    .exam-shortcut:hover::after {
+        transform: translate(-4px, -4px);
+        background: rgba(255,255,255,0.12);
+    }
+
+/* Mobile */
+@media (max-width: 760px) {
+    .exam-shortcut {
+        min-height: 170px;
+        padding: 24px;
+    }
+
+        .exam-shortcut strong {
+            font-size: 27px;
+        }
+}

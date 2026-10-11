@@ -51,6 +51,20 @@ const COURSES = [
             [
                 "Lecture 3 — Dictionaries and HT",
                 "file/cs315/chapters/Lecture 3 cs315  Dictionaries and HT.pptx"
+            ],
+            [
+                "Lecture 4 — Dynamic prog",
+                "file/cs315/chapters/Lecture 4 cs315  Dynamic prog - Tagged.pdf"
+            ]
+            ,
+            [
+                "Lecture 5 — Greedy algorithms Huffman ",
+                "file/cs315/chapters/Lecture 5 cs315 Greedy algorithms Huffman - Tagged.pdf"
+            ]
+            ,
+            [
+                "Lecture 6&7 — B-Tree ",
+                "file/cs315/chapters/Lecture 6 & 7 cs315  B-Tree - Tagged.pdf"
             ]
         ],
     "files": [],
@@ -454,7 +468,11 @@ const COURSES = [
           [
               "Chapter 1",
               "file/cs342/chapters/chapter1.pptx"
-          ], 
+         ], 
+         [
+             "chaper 2-5 - Tagged.pdf",
+             "file/cs342/chapters/chaper 2-5 - Tagged.pdf"
+         ], 
           [
               "Code 01 — TestHoliday",
               "file/cs342/chapters/اكواد د.هادية/TestHoliday.txt"
@@ -536,10 +554,25 @@ const COURSES = [
     "practice": [],
     "coming": false,
     "books": [],
-      "chapters": [[
-          "Chapter 1",
+      "chapters": [
+          [
+              "1 Introduction_Updated.pdf",
+              "file/cs341/chapters/1 Introduction_Updated.pdf"
+          ],
+          [
+              "Chapter 1 - Overview of Graphics Systems (2).pdf",
           "file/cs341/chapters/Chapter 1 - Overview of Graphics Systems (2).pdf"
-      ]],
+      ],
+          [
+              "Chapter 2 - Color Models.pdf",
+              "file/cs341/chapters/Chapter 2 - Color Models.pdf"
+          ],
+          [
+              "Chapter 3 - Vector Tools 1.pdf",
+              "file/cs341/chapters/Chapter 3 - Vector Tools 1.pdf"
+          ]
+
+      ],
     "files": [],
       "exams": [
           [
