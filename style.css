@@ -1,19 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800&display=swap');
 
 /* =========================
    ROOT
 ========================= */
 
 :root {
-    --bg: #040914;
-    --card: #081321;
-    --card2: #0b1829;
-    --line: #152a43;
-    --blue: #2f81f7;
-    --cyan: #55c2ff;
-    --text: #f2f7ff;
-    --muted: #8aa0bb;
+    --bg: #f7f9fc;
+    --surface: #ffffff;
+    --surface-soft: #f3f6fa;
+    --blue: #1557a6;
+    --blue-dark: #0c3f7c;
+    --blue-light: #eaf2fb;
+    --text: #172033;
+    --muted: #68758a;
+    --line: #e1e7ef;
+    --line-blue: #c8d9ee;
+    --shadow: 0 8px 28px rgba(25, 55, 95, 0.07);
+    --shadow-hover: 0 14px 35px rgba(25, 55, 95, 0.12);
 }
 
 
@@ -25,11 +28,16 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
-    background: radial-gradient( 900px 480px at 75% -80px, #0c3262 0, transparent 60% ), var(--bg);
+    min-height: 100vh;
+    background: var(--bg);
     color: var(--text);
-    font-family: Tajawal, system-ui, sans-serif;
+    font-family: "Tajawal", system-ui, sans-serif;
 }
 
 a {
@@ -54,12 +62,12 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid var(--line);
     position: sticky;
     top: 0;
     z-index: 20;
-    background: #040914e8;
-    backdrop-filter: blur(14px);
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid var(--line);
+    backdrop-filter: blur(12px);
 }
 
 
@@ -67,42 +75,43 @@ header {
 
 .logo {
     display: grid;
-    grid-template-columns: 40px auto;
-    grid-template-rows: 20px 15px;
-    column-gap: 10px;
+    grid-template-columns: 42px auto;
+    grid-template-rows: 21px 15px;
+    column-gap: 11px;
     align-items: center;
 }
 
     .logo i {
         grid-row: 1 / 3;
-        width: 40px;
-        height: 40px;
-        border-radius: 12px;
-        border: 1px solid #2863a6;
-        background: linear-gradient(145deg, #0c2a50, #071526);
+        width: 42px;
+        height: 42px;
         display: grid;
         place-items: center;
-        color: var(--cyan);
+        border-radius: 10px;
+        background: var(--blue);
+        color: #ffffff;
         font-style: normal;
         font-weight: 800;
         font-size: 20px;
     }
 
     .logo b {
+        color: var(--text);
         font-size: 17px;
     }
 
     .logo span {
+        color: #8491a4;
         font-size: 9px;
         letter-spacing: 2px;
-        color: #5f7895;
     }
 
 .nav-note,
 .all {
+    color: #77859a;
     font-size: 11px;
+    font-weight: 700;
     letter-spacing: 1px;
-    color: #738ba7;
 }
 
 
@@ -111,32 +120,37 @@ header {
 ========================= */
 
 .hero {
-    padding: 92px 0 68px;
+    padding: 88px 0 62px;
 }
 
 .kicker,
 .titlebar small,
 .future small,
 .course-code {
+    color: var(--blue);
     font: 800 11px/1 system-ui;
-    letter-spacing: 2.2px;
-    color: var(--cyan);
+    letter-spacing: 2px;
 }
 
 h1 {
-    font-size: clamp(48px, 8vw, 90px);
     margin: 17px 0 12px;
-    line-height: 1;
+    color: var(--text);
+    font-size: clamp(48px, 8vw, 86px);
+    line-height: 1.05;
+    letter-spacing: -2px;
 }
 
     h1 em {
-        font-style: normal;
         color: var(--blue);
+        font-style: normal;
     }
 
 .hero p {
-    font-size: 19px;
+    max-width: 680px;
+    margin: 0;
     color: var(--muted);
+    font-size: 19px;
+    line-height: 1.8;
 }
 
 
@@ -146,19 +160,21 @@ h1 {
 
 .search {
     max-width: 640px;
-    margin-top: 34px;
+    margin-top: 32px;
     padding: 0 18px;
     display: flex;
     align-items: center;
     gap: 12px;
+    background: var(--surface);
     border: 1px solid var(--line);
-    border-radius: 16px;
-    background: #07111e;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(25, 55, 95, 0.04);
+    transition: 0.2s ease;
 }
 
     .search:focus-within {
-        border-color: #2e70bd;
-        box-shadow: 0 0 0 3px #2f81f712;
+        border-color: var(--blue);
+        box-shadow: 0 0 0 3px rgba(21, 87, 166, 0.10);
     }
 
     .search input {
@@ -167,10 +183,14 @@ h1 {
         background: none;
         border: 0;
         outline: 0;
-        color: white;
+        color: var(--text);
         font-family: inherit;
         font-size: 15px;
     }
+
+        .search input::placeholder {
+            color: #9aa5b5;
+        }
 
 
 /* =========================
@@ -186,12 +206,13 @@ h1 {
 
     .titlebar h2 {
         margin: 7px 0 0;
+        color: var(--text);
         font-size: 28px;
     }
 
     .titlebar > span {
+        color: #8793a5;
         font-size: 12px;
-        color: #657f9e;
     }
 
 
@@ -210,32 +231,34 @@ h1 {
     padding: 26px;
     position: relative;
     overflow: hidden;
+    background: var(--surface);
     border: 1px solid var(--line);
-    border-radius: 20px;
-    background: linear-gradient(145deg, var(--card2), #07101c);
-    transition: 0.22s;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
     .course-card:hover {
         transform: translateY(-4px);
-        border-color: #2c6fb9;
-        box-shadow: 0 22px 60px #0008;
+        border-color: var(--line-blue);
+        box-shadow: var(--shadow-hover);
     }
 
     .course-card .code {
+        color: var(--blue);
         font: 800 12px system-ui;
         letter-spacing: 1.6px;
-        color: var(--cyan);
     }
 
     .course-card h3 {
         margin: 16px 0 6px;
+        color: var(--text);
         font-size: 23px;
     }
 
     .course-card p {
         margin: 0;
-        color: #728aa6;
+        color: var(--muted);
     }
 
     .course-card .go {
@@ -246,31 +269,38 @@ h1 {
         height: 38px;
         display: grid;
         place-items: center;
-        border: 1px solid var(--line);
+        background: var(--blue-light);
+        color: var(--blue);
+        border: 1px solid #d4e2f3;
         border-radius: 50%;
-        color: var(--cyan);
+        transition: 0.2s ease;
+    }
+
+    .course-card:hover .go {
+        background: var(--blue);
+        color: #ffffff;
     }
 
     .course-card .stats {
         position: absolute;
         right: 26px;
         bottom: 24px;
+        color: #8390a3;
         font-size: 11px;
-        color: #5c7591;
     }
 
     .course-card .water {
         position: absolute;
         left: -8px;
         bottom: -32px;
+        color: var(--blue);
         font: 900 90px system-ui;
         letter-spacing: -6px;
-        color: #fff;
-        opacity: 0.025;
+        opacity: 0.035;
     }
 
 .disabled {
-    opacity: 0.48;
+    opacity: 0.55;
 }
 
 
@@ -284,18 +314,21 @@ h1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 35px;
+    background: var(--surface);
     border: 1px solid var(--line);
-    border-radius: 22px;
-    background: #06101c;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
 }
 
     .future h2 {
         margin: 10px 0;
+        color: var(--text);
         font-size: 28px;
     }
 
     .future p {
         color: var(--muted);
+        line-height: 1.7;
     }
 
 .future-grid {
@@ -306,15 +339,16 @@ h1 {
 
     .future-grid b {
         padding: 18px;
-        border: 1px solid #142a44;
-        border-radius: 13px;
-        background: #091625;
+        background: var(--surface-soft);
+        border: 1px solid var(--line);
+        border-radius: 11px;
+        color: var(--text);
     }
 
     .future-grid span {
         display: block;
         margin-top: 6px;
-        color: #64809e;
+        color: #7b899d;
         font-size: 11px;
         font-weight: 500;
     }
@@ -329,6 +363,7 @@ h1 {
 }
 
     .course-head h1 {
+        color: var(--text);
         font-size: clamp(42px, 7vw, 72px);
     }
 
@@ -346,16 +381,16 @@ h1 {
     gap: 8px;
     padding: 10px 18px;
     margin-bottom: 20px;
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 12px;
-    color: #ffffff;
-    font-weight: 600;
+    background: var(--surface);
+    color: var(--blue);
+    border: 1px solid var(--line-blue);
+    border-radius: 10px;
+    font-weight: 700;
     transition: 0.2s ease;
 }
 
     .inline-back:hover {
-        background: rgba(255, 255, 255, 0.12);
+        background: var(--blue-light);
         transform: translateX(3px);
     }
 
@@ -371,10 +406,10 @@ h1 {
 
     .quick span {
         padding: 9px 12px;
+        background: var(--surface);
+        color: #65748a;
         border: 1px solid var(--line);
         border-radius: 999px;
-        background: #07111e;
-        color: #7891ad;
         font-size: 12px;
     }
 
@@ -391,26 +426,33 @@ h1 {
     gap: 8px;
     overflow: auto;
     padding: 16px 0;
+    background: rgba(247, 249, 252, 0.96);
     border-bottom: 1px solid var(--line);
-    background: #040914e8;
-    backdrop-filter: blur(14px);
+    backdrop-filter: blur(12px);
 }
 
 button.tab {
     padding: 10px 15px;
     white-space: nowrap;
+    background: var(--surface);
+    color: #66758a;
     border: 1px solid var(--line);
     border-radius: 999px;
-    background: #07111e;
-    color: #91a6bf;
     font-family: inherit;
+    font-weight: 600;
     cursor: pointer;
+    transition: 0.2s ease;
 }
 
+    button.tab:hover {
+        border-color: var(--line-blue);
+        color: var(--blue);
+    }
+
 .tab.active {
-    background: #0c2c55;
-    color: #fff;
-    border-color: #286bc0;
+    background: var(--blue);
+    color: #ffffff;
+    border-color: var(--blue);
 }
 
 
@@ -439,14 +481,15 @@ button.tab {
         height: 40px;
         display: grid;
         place-items: center;
-        border: 1px solid var(--line);
-        border-radius: 11px;
-        background: #0a1c31;
+        background: var(--blue-light);
+        border: 1px solid #d6e3f2;
+        border-radius: 10px;
         font-style: normal;
     }
 
 .panel h2 {
     margin: 0;
+    color: var(--text);
     font-size: 27px;
 }
 
@@ -467,31 +510,35 @@ button.tab {
     justify-content: space-between;
     align-items: center;
     gap: 16px;
+    background: var(--surface);
     border: 1px solid var(--line);
-    border-radius: 15px;
-    background: var(--card);
-    transition: 0.2s;
+    border-radius: 13px;
+    box-shadow: 0 4px 16px rgba(25, 55, 95, 0.04);
+    transition: 0.2s ease;
 }
 
     .resource:hover {
-        border-color: #2b6caf;
-        background: #0a192a;
+        border-color: var(--line-blue);
+        box-shadow: 0 8px 22px rgba(25, 55, 95, 0.08);
+        transform: translateY(-2px);
     }
 
     .resource h3 {
         margin: 0 0 5px;
+        color: var(--text);
         font-size: 16px;
     }
 
     .resource p {
         margin: 0;
+        color: #77869a;
         font-size: 12px;
-        color: #748da9;
     }
 
     .resource .ext {
-        color: var(--cyan);
+        color: var(--blue);
         font-size: 12px;
+        font-weight: 700;
         white-space: nowrap;
     }
 
@@ -503,16 +550,16 @@ button.tab {
 .empty {
     padding: 52px 25px;
     text-align: center;
-    border: 1px dashed #23415f;
-    border-radius: 17px;
-    background: #06101b;
-    color: #7089a5;
+    background: var(--surface);
+    border: 1px dashed #c7d4e3;
+    border-radius: 14px;
+    color: #7b899b;
 }
 
     .empty b {
         display: block;
         margin-bottom: 7px;
-        color: #b8c9da;
+        color: #4d5c70;
     }
 
 
@@ -534,8 +581,9 @@ footer {
     padding: 30px max(22px, 5vw);
     display: flex;
     justify-content: space-between;
+    background: #ffffff;
     border-top: 1px solid var(--line);
-    color: #526c89;
+    color: #7b899b;
     font: 700 10px system-ui;
     letter-spacing: 1.5px;
 }
@@ -572,6 +620,10 @@ footer {
     .course-head {
         padding-top: 45px;
     }
+
+    h1 {
+        letter-spacing: -1px;
+    }
 }
 
 
@@ -585,6 +637,18 @@ footer {
         padding: 0 16px;
     }
 
+    header {
+        padding: 0 16px;
+    }
+
+    .hero {
+        padding-top: 48px;
+    }
+
+        .hero p {
+            font-size: 16px;
+        }
+
     .future-grid {
         grid-template-columns: 1fr;
     }
@@ -595,5 +659,273 @@ footer {
 
     footer span {
         display: none;
+    }
+}
+/* ===================================
+   EXAM SHORTCUTS
+=================================== */
+
+.exam-shortcuts {
+    margin: 0 0 55px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.exam-shortcut {
+    width: 100%;
+    min-height: 150px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    text-align: right;
+    font-family: inherit;
+    background: #ffffff;
+    color: #172033;
+    border: 1px solid #dce5f0;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+    .exam-shortcut:hover {
+        border-color: #1557a6;
+        box-shadow: 0 8px 24px rgba(21, 87, 166, 0.09);
+        transform: translateY(-2px);
+    }
+
+.exam-shortcut-label {
+    color: #64748b;
+    font-size: 13px;
+}
+
+.exam-shortcut strong {
+    color: #172033;
+    font-size: 23px;
+}
+
+.exam-shortcut-action {
+    margin-top: auto;
+    color: #1557a6;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* ===================================
+   MIDTERMS PAGE
+=================================== */
+
+.midterms-page {
+    padding: 48px 0 85px;
+}
+
+.midterms-heading {
+    margin: 18px 0 36px;
+}
+
+.midterms-eyebrow {
+    color: #1557a6;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.midterms-heading h1 {
+    margin: 15px 0 12px;
+    font-size: clamp(32px, 5vw, 52px);
+    letter-spacing: 0;
+}
+
+.midterms-heading p {
+    color: #68758a;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* NEXT EXAM */
+
+.next-exam-card {
+    padding: 32px;
+    background: #ffffff;
+    border: 1px solid #dce5f0;
+    border-radius: 16px;
+    box-shadow: 0 8px 28px rgba(25, 55, 95, 0.06);
+}
+
+.next-exam-label {
+    display: inline-block;
+    margin-bottom: 22px;
+    padding: 8px 13px;
+    background: #eaf2fb;
+    color: #1557a6;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.next-exam-details h2 {
+    margin: 10px 0;
+    color: #172033;
+    font-size: 28px;
+}
+
+.next-exam-details p {
+    color: #68758a;
+    font-size: 14px;
+}
+
+.midterm-code {
+    color: #1557a6;
+    font-family: system-ui, sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+/* COUNTDOWN */
+
+.countdown-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.countdown-unit {
+    padding: 22px 10px;
+    text-align: center;
+    background: #edf4fc;
+    border: 1px solid #dce8f7;
+    border-radius: 11px;
+}
+
+    .countdown-unit strong {
+        display: block;
+        color: #1557a6;
+        font-family: system-ui, sans-serif;
+        font-size: clamp(24px, 4vw, 42px);
+        font-weight: 800;
+        font-variant-numeric: tabular-nums;
+    }
+
+    .countdown-unit span {
+        display: block;
+        margin-top: 8px;
+        color: #64748b;
+        font-size: 13px;
+    }
+
+/* EXAM LIST */
+
+.midterms-list-heading {
+    margin: 46px 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+    .midterms-list-heading h2 {
+        margin: 0;
+        color: #172033;
+        font-size: 25px;
+    }
+
+    .midterms-list-heading > span {
+        color: #68758a;
+        font-size: 13px;
+    }
+
+.midterms-list {
+    display: grid;
+    gap: 12px;
+}
+
+.midterm-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 23px;
+    background: #ffffff;
+    border: 1px solid #e1e7ef;
+    border-radius: 12px;
+}
+
+.midterm-info h3 {
+    margin: 8px 0;
+    color: #172033;
+    font-size: 18px;
+}
+
+.midterm-info p {
+    margin: 0;
+    color: #68758a;
+    font-size: 13px;
+}
+
+.midterm-remaining {
+    flex-shrink: 0;
+    color: #1557a6;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: left;
+}
+
+    .midterm-remaining.finished {
+        color: #8a96a7;
+    }
+
+.exam-completed {
+    text-align: center;
+    padding: 30px 0;
+}
+
+    .exam-completed h2 {
+        color: #172033;
+    }
+
+    .exam-completed p {
+        color: #68758a;
+    }
+
+/* RESPONSIVE */
+
+@media (max-width: 760px) {
+
+    .exam-shortcuts {
+        grid-template-columns: 1fr;
+    }
+
+    .midterms-page {
+        padding-top: 30px;
+    }
+
+    .next-exam-card {
+        padding: 22px 16px;
+    }
+
+    .countdown-grid {
+        gap: 7px;
+    }
+
+    .countdown-unit {
+        padding: 17px 4px;
+    }
+
+        .countdown-unit span {
+            font-size: 11px;
+        }
+
+    .midterm-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
+
+    .midterm-remaining {
+        text-align: right;
     }
 }

@@ -563,8 +563,22 @@ function home() {
     document.title = "دليلك للمستولى السابع";
 
     app.innerHTML = `<section class="hero"><div class="kicker">LEVEL 07 / ONE PLACE</div><h1>دليلك <em>للمستوى السابع
-    </em></h1><p>كل ما تحتاجه لمواد المستوى السابع في مكان واحد.</p><div class="search"><span>⌕</span><input
-    id="search" placeholder="ابحث باسم المادة أو رمزها أو أحد المصادر..."></div></section><section class="titlebar">
+    </em></h1><p> </p><div class="search"><span>⌕</span><input
+    id="search" placeholder="ابحث باسم المادة أو رمزها أو أحد المصادر..."></div></section>
+    <section class="exam-shortcuts">
+    <button class="exam-shortcut" id="midtermBtn" type="button">
+        <span class="exam-shortcut-label">الاختبارات النصفية</span>
+        <strong>Midterm exams</strong>
+        <span class="exam-shortcut-action">عرض العد التنازلي ←</span>
+    </button>
+
+<button class="exam-shortcut" id="finalBtn" type="button">
+    <span class="exam-shortcut-label">الاختبارات النهائية</span>
+    <strong>Final Exams</strong>
+    <span class="exam-shortcut-action">عرض العد التنازلي ←</span>
+</button>
+
+</section><section class="titlebar">
     <div><small>COURSES</small><h2>مواد المستوى السابع</h2></div><span id="resultCount"></span></section><div id="cards" class="cards"></div>`;
 
     const cards = document.querySelector("#cards"), q = document.querySelector("#search"), rc = document.querySelector("#resultCount");
@@ -572,7 +586,14 @@ function home() {
     function draw(list) {
         rc.textContent = `${list.length}
  مواد`;cards.innerHTML=list.map(c=>{let n=c.resources.length+c.practice.length+c.books.length;return `<a class="course-card" href="#course/${c.id}"><span class="go">↗</span><div class="code">${c.code}</div><h3>${c.name}</h3><p>${c.en}</p><span class="stats"></span><span class="water">${c.code}</span></a>`}).join("")}
- draw(COURSES);q.oninput=()=>{let s=q.value.trim().toLowerCase();draw(COURSES.filter(c=>searchable(c).includes(s)))}
+    draw(COURSES);
+    document.getElementById("midtermBtn").onclick = () => {
+        location.hash = "#midterms";
+    };
+    document.getElementById("finalBtn").onclick = () => {
+        location.hash = "#finals";
+    };
+    q.oninput = () => { let s = q.value.trim().toLowerCase(); draw(COURSES.filter(c => searchable(c).includes(s))) }
 }
 function coursePage(id){
  const c=COURSES.find(x=>x.id===id); if(!c){location.hash="";return}
@@ -664,8 +685,405 @@ function coursePage(id){
         document.getElementById(b.dataset.id).classList.add("active");
     });
 }
-function route() {
-    const m = location.hash.match(/^#course\/(.+)$/); m ?
-        coursePage(m[1]) : home()
+// ====================================
+// MIDTERM EXAMS - LEVEL 07
+// ====================================
+
+const MIDTERM_EXAMS = [
+    {
+        code: "MATH317",
+        name: "الطرق العددية",
+        date: "2026-10-25T12:15:00+03:00",
+        displayDate: "الأحد 25 أكتوبر 2026",
+        time: "12:15 مساءً"
+    },
+    {
+        code: "CS383",
+        name: "هندسة البرمجيات",
+        date: "2026-10-27T13:30:00+03:00",
+        displayDate: "الثلاثاء 27 أكتوبر 2026",
+        time: "1:30 مساءً"
+    },
+    {
+        code: "MATH329",
+        name: "بحوث العمليات",
+        date: "2026-10-29T11:00:00+03:00",
+        displayDate: "الخميس 29 أكتوبر 2026",
+        time: "11:00 صباحًا"
+    },
+    {
+        code: "CS341",
+        name: "الرسم بالحاسب",
+        date: "2026-11-02T12:15:00+03:00",
+        displayDate: "الإثنين 2 نوفمبر 2026",
+        time: "12:15 مساءً"
+    },
+    {
+        code: "CS315",
+        name: "تحليل وتصميم خوارزميات",
+        date: "2026-11-04T11:00:00+03:00",
+        displayDate: "الأربعاء 4 نوفمبر 2026",
+        time: "11:00 صباحًا"
+    },
+    {
+        code: "CS342",
+        name: "البرمجة المرئية",
+        date: "2026-11-08T11:00:00+03:00",
+        displayDate: "الأحد 8 نوفمبر 2026",
+        time: "11:00 صباحًا"
+    }
+];
+
+let midtermTimer = null;
+
+function getTimeRemaining(date) {
+    const difference = new Date(date).getTime() - Date.now();
+
+    if (difference <= 0) {
+        return null;
+    }
+
+    return {
+        days: Math.floor(difference / 86400000),
+        hours: Math.floor((difference / 3600000) % 24),
+        minutes: Math.floor((difference / 60000) % 60),
+        seconds: Math.floor((difference / 1000) % 60)
+    };
 }
-addEventListener("hashchange",route);route();
+
+function formatRemaining(date) {
+    const remaining = getTimeRemaining(date);
+
+    if (!remaining) {
+        return "انتهى الاختبار";
+    }
+
+    return `${remaining.days} يوم، ${remaining.hours} ساعة، ${remaining.minutes} دقيقة`;
+}
+
+function midtermsPage() {
+    document.title = "عداد الميدات | دليلك للفل 7";
+
+    app.innerHTML = `
+        <section class="midterms-page">
+
+            <a href="#" class="inline-back">← العودة للرئيسية</a>
+
+            <div class="midterms-heading">
+                <span class="midterms-eyebrow">LEVEL 07 / 481</span>
+                <h1>العد التنازلي للميدات</h1>
+                <p>تابع الوقت المتبقي لاختبارات منتصف الفصل الدراسي.</p>
+            </div>
+
+            <div class="next-exam-card" id="nextExamCard"></div>
+
+            <div class="midterms-list-heading">
+                <h2>جدول الاختبارات</h2>
+                <span>6 مواد دراسية</span>
+            </div>
+
+            <div class="midterms-list" id="midtermsList">
+                ${MIDTERM_EXAMS.map(exam => `
+                    <div class="midterm-row">
+                        <div class="midterm-info">
+                            <span class="midterm-code">${exam.code}</span>
+                            <h3>${exam.name}</h3>
+                            <p>${exam.displayDate} • ${exam.time}</p>
+                        </div>
+
+                        <div class="midterm-remaining"
+                             data-exam-date="${exam.date}">
+                        </div>
+                    </div>
+                `).join("")}
+            </div>
+
+        </section>
+    `;
+
+    updateMidtermCountdown();
+
+    clearInterval(midtermTimer);
+    midtermTimer = setInterval(updateMidtermCountdown, 1000);
+}
+
+function updateMidtermCountdown() {
+
+    if (location.hash !== "#midterms") {
+        clearInterval(midtermTimer);
+        midtermTimer = null;
+        return;
+    }
+
+    const nextExam = MIDTERM_EXAMS.find(exam =>
+        new Date(exam.date).getTime() > Date.now()
+    );
+
+    const card = document.getElementById("nextExamCard");
+
+    if (!card) return;
+
+    if (!nextExam) {
+        card.innerHTML = `
+            <div class="exam-completed">
+                <h2>اكتملت اختبارات منتصف الفصل</h2>
+                <p>نتمنى لكم التوفيق والنجاح.</p>
+            </div>
+        `;
+    } else {
+        const remaining = getTimeRemaining(nextExam.date);
+
+        if (!remaining) return;
+
+        const units = [
+            ["الأيام", remaining.days],
+            ["الساعات", remaining.hours],
+            ["الدقائق", remaining.minutes],
+            ["الثواني", remaining.seconds]
+        ];
+
+        card.innerHTML = `
+            <div class="next-exam-label">الاختبار القادم</div>
+
+            <div class="next-exam-details">
+                <div>
+                    <span class="midterm-code">${nextExam.code}</span>
+                    <h2>${nextExam.name}</h2>
+                    <p>${nextExam.displayDate} • ${nextExam.time}</p>
+                </div>
+            </div>
+
+            <div class="countdown-grid">
+                ${units.map(([label, value]) => `
+                    <div class="countdown-unit">
+                        <strong>${String(value).padStart(2, "0")}</strong>
+                        <span>${label}</span>
+                    </div>
+                `).join("")}
+            </div>
+        `;
+    }
+
+    document.querySelectorAll(".midterm-remaining").forEach(element => {
+        element.textContent = formatRemaining(element.dataset.examDate);
+
+        if (!getTimeRemaining(element.dataset.examDate)) {
+            element.classList.add("finished");
+        }
+    });
+}
+// ====================================
+// FINAL EXAMS - LEVEL 07
+// ====================================
+
+const FINAL_EXAMS = [
+    {
+        code: "CS383",
+        name: "هندسة البرمجيات",
+        date: "2026-12-27T13:00:00+03:00",
+        displayDate: "الأحد 27 ديسمبر 2026",
+        time: "1:00 – 3:00 مساءً"
+    },
+    {
+        code: "MATH329",
+        name: "بحوث العمليات",
+        date: "2026-12-29T08:00:00+03:00",
+        displayDate: "الثلاثاء 29 ديسمبر 2026",
+        time: "8:00 – 10:00 صباحًا"
+    },
+    {
+        code: "CS341",
+        name: "الرسم بالحاسب",
+        date: "2026-12-31T10:30:00+03:00",
+        displayDate: "الخميس 31 ديسمبر 2026",
+        time: "10:30 صباحًا – 12:30 مساءً"
+    },
+    {
+        code: "CS315",
+        name: "تحليل وتصميم الخوارزميات",
+        date: "2027-01-04T08:00:00+03:00",
+        displayDate: "الاثنين 4 يناير 2027",
+        time: "8:00 – 10:00 صباحًا"
+    },
+    {
+        code: "CS342",
+        name: "البرمجة المرئية",
+        date: "2027-01-06T08:00:00+03:00",
+        displayDate: "الأربعاء 6 يناير 2027",
+        time: "8:00 – 10:00 صباحًا"
+    },
+    {
+        code: "MATH317",
+        name: "الطرق العددية",
+        date: "2027-01-07T08:00:00+03:00",
+        displayDate: "الخميس 7 يناير 2027",
+        time: "8:00 – 10:00 صباحًا"
+    }
+];
+
+let finalTimer = null;
+// ====================================
+// FINAL EXAMS PAGE
+// ====================================
+
+function finalsPage() {
+
+    document.title = "Final Exams | دليلك للفل 7";
+
+    app.innerHTML = `
+        <section class="midterms-page">
+
+            <a href="#" class="inline-back">
+                ← العودة للرئيسية
+            </a>
+
+            <div class="midterms-heading">
+                <span class="midterms-eyebrow">LEVEL 07 / 481</span>
+                <h1>Final Exams</h1>
+                <p>العد التنازلي للاختبارات النهائية.</p>
+            </div>
+
+            <div class="next-exam-card" id="nextFinalCard"></div>
+
+            <div class="midterms-list-heading">
+                <h2>جدول الاختبارات النهائية</h2>
+                <span>${FINAL_EXAMS.length} مواد دراسية</span>
+            </div>
+
+            <div class="midterms-list">
+
+                ${FINAL_EXAMS.map(exam => `
+                    <div class="midterm-row">
+
+                        <div class="midterm-info">
+                            <span class="midterm-code">${exam.code}</span>
+                            <h3>${exam.name}</h3>
+                            <p>${exam.displayDate} • ${exam.time}</p>
+                        </div>
+
+                        <div
+                            class="midterm-remaining final-remaining"
+                            data-exam-date="${exam.date}">
+                        </div>
+
+                    </div>
+                `).join("")}
+
+            </div>
+
+        </section>
+    `;
+}
+// ====================================
+// FINAL EXAMS COUNTDOWN
+// ====================================
+
+function updateFinalCountdown() {
+
+    if (location.hash !== "#finals") {
+        clearInterval(finalTimer);
+        finalTimer = null;
+        return;
+    }
+
+    const nextExam = FINAL_EXAMS.find(exam =>
+        new Date(exam.date).getTime() > Date.now()
+    );
+
+    const card = document.getElementById("nextFinalCard");
+
+    if (!card) return;
+
+    if (!nextExam) {
+        card.innerHTML = `
+            <div class="exam-completed">
+                <h2>اكتملت الاختبارات النهائية</h2>
+                <p>نتمنى لكم التوفيق والنجاح.</p>
+            </div>
+        `;
+    } else {
+
+        const remaining = getTimeRemaining(nextExam.date);
+
+        if (!remaining) return;
+
+        const units = [
+            ["الأيام", remaining.days],
+            ["الساعات", remaining.hours],
+            ["الدقائق", remaining.minutes],
+            ["الثواني", remaining.seconds]
+        ];
+
+        card.innerHTML = `
+            <div class="next-exam-label">الاختبار القادم</div>
+
+            <div class="next-exam-details">
+                <span class="midterm-code">${nextExam.code}</span>
+                <h2>${nextExam.name}</h2>
+                <p>${nextExam.displayDate} • ${nextExam.time}</p>
+            </div>
+
+            <div class="countdown-grid">
+                ${units.map(([label, value]) => `
+                    <div class="countdown-unit">
+                        <strong>${String(value).padStart(2, "0")}</strong>
+                        <span>${label}</span>
+                    </div>
+                `).join("")}
+            </div>
+     `;
+
+        updateFinalCountdown();
+
+        clearInterval(finalTimer);
+
+        finalTimer = setInterval(updateFinalCountdown, 1000);
+    }
+
+    // تحديث الوقت المتبقي لجميع المواد
+    document.querySelectorAll(".final-remaining").forEach(element => {
+
+        element.textContent = formatRemaining(element.dataset.examDate);
+
+        if (!getTimeRemaining(element.dataset.examDate)) {
+            element.classList.add("finished");
+        } else {
+            element.classList.remove("finished");
+        }
+
+    });
+}
+function route() {
+
+    // إيقاف عداد الميدات عند مغادرة الصفحة
+    clearInterval(midtermTimer);
+    midtermTimer = null;
+
+    // إيقاف عداد الفاينلز عند مغادرة الصفحة
+    clearInterval(finalTimer);
+    finalTimer = null;
+
+    // صفحة الاختبارات النصفية
+    if (location.hash === "#midterms") {
+        midtermsPage();
+        return;
+    }
+
+    // صفحة الاختبارات النهائية
+    if (location.hash === "#finals") {
+        finalsPage();
+        return;
+    }
+
+    // صفحات المواد
+    const match = location.hash.match(/^#course\/(.+)$/);
+
+    if (match) {
+        coursePage(match[1]);
+    } else {
+        home();
+    }
+}
+
+addEventListener("hashchange", route);
+route();
