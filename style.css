@@ -1073,3 +1073,48 @@ button.tab {
         background: linear-gradient(145deg, #142d50, #0b1b34);
     }
 }
+/* =====================================
+   PREMIUM SVG ICONS
+===================================== */
+
+.tab {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+}
+
+    .tab svg {
+        width: 17px;
+        height: 17px;
+        stroke-width: 1.8;
+    }
+
+.panel-title svg {
+    width: 23px;
+    height: 23px;
+    color: #68a6ff;
+    stroke-width: 1.7;
+}
+
+.panel-title i {
+    display: grid;
+    place-items: center;
+}
+
+.resource .ext {
+    font-weight: 700;
+}
+.tab {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+}
+
+    .tab svg {
+        width: 18px;
+        height: 18px;
+        color: inherit;
+        stroke-width: 1.8;
+    }

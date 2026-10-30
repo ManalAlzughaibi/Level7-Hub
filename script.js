@@ -681,7 +681,7 @@ function home() {
             </h1>
 
             <p>
-                كل ما تحتاجينه لمواد المستوى السابع في مكان واحد.
+                مواد المستوى السابع في مكان واحد.
             </p>
 
             <div class="search">
@@ -771,10 +771,10 @@ function coursePage(id) {
     document.title = `${c.code} | ${c.name}`;
 
     const tabs = [
-        ["chapters", "📚", "Chapters"],
-        ["resources", "🎥", "مصادر الشرح"],
-        ["exams", "📝", "النماذج"],
-        ["practice", "❓", "أسئلة للتدريب"]
+        ["chapters", "book-open", "Chapters"],
+        ["resources", "circle-play", "مصادر الشرح"],
+        ["exams", "file-text", "النماذج"],
+        ["practice", "clipboard-list", "أسئلة للتدريب"]
     ];
 
     const empty = text => `
@@ -857,7 +857,8 @@ function coursePage(id) {
                     data-id="${tab[0]}"
                     type="button"
                 >
-                    ${tab[1]} ${tab[2]}
+                   <i data-lucide="${tab[1]}"></i>
+                 ${tab[2]}
                 </button>
             `).join("")}
 
@@ -866,7 +867,7 @@ function coursePage(id) {
         <section class="panel active" id="chapters">
 
             <div class="panel-title">
-                <i>📚</i>
+              <i data-lucide="book-open"></i>
                 <h2>Chapters</h2>
             </div>
 
@@ -877,7 +878,7 @@ function coursePage(id) {
         <section class="panel" id="resources">
 
             <div class="panel-title">
-                <i>🎥</i>
+               <i data-lucide="play-circle"></i>
                 <h2>مصادر الشرح</h2>
             </div>
 
@@ -888,7 +889,7 @@ function coursePage(id) {
         <section class="panel" id="exams">
 
             <div class="panel-title">
-                <i>📝</i>
+          <i data-lucide="file-text"></i>
                 <h2>النماذج والاختبارات السابقة</h2>
             </div>
 
@@ -899,7 +900,7 @@ function coursePage(id) {
         <section class="panel" id="practice">
 
             <div class="panel-title">
-                <i>❓</i>
+                <i data-lucide="clipboard-list"></i>
                 <h2>أسئلة للتدريب</h2>
             </div>
 
@@ -908,6 +909,9 @@ function coursePage(id) {
         </section>
     `;
 
+    // ====================================
+    // TABS ACTIONS
+    // ====================================
     // ====================================
     // TABS ACTIONS
     // ====================================
@@ -930,9 +934,24 @@ function coursePage(id) {
                 .getElementById(button.dataset.id)
                 .classList.add("active");
 
+            // GSAP Animation
             animateResources();
         };
     });
+
+    // ====================================
+    // LUCIDE ICONS
+    // ====================================
+
+    if (typeof lucide !== "undefined") {
+        lucide.createIcons({
+            attrs: {
+                width: 18,
+                height: 18,
+                "stroke-width": 1.8
+            }
+        });
+    }
 }
 
 
