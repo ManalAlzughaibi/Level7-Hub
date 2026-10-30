@@ -1,45 +1,49 @@
 const COURSES = [
-  {
-    "id": "cs315",
-    "code": "CS315",
-    "name": "تحليل وتصميم خوارزميات",
-    "en": "Algorithms Analysis & Design",
-    "resources": [
-      [
-        "قناة شرح 1",
-        "YouTube Playlist",
-        "https://youtube.com/playlist?list=PLwCMLs3sjOY6KH-8c9F-lMWn-r02hyoV_&si=BoUDgvricjmh5zJi"
-      ],
-      [
-        "قناة شرح 2",
-        "YouTube Playlist",
-        "https://youtube.com/playlist?list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O&si=5gsB_RPO36g4p-IW"
-      ],
-      [
-        "قناة شرح 3",
-        "YouTube Playlist",
-        "https://youtube.com/playlist?list=PLdo5W4Nhv31bbKJzrsKfMpo_grxuLl8LU&si=zAiakTOjjMQ6gin5"
-      ],
-      [
-        "قناة شرح 4",
-        "YouTube Playlist",
-        "https://youtube.com/playlist?list=PLF8OvnCBlEY3a1pbPrE6fvNuV3qi-6KRf&si=l-WLQDS3cGII7SLm"
-      ],
-      [
-        "Huffman Code",
-        "شرح موضوع محدد",
-        "https://youtu.be/B3y0RsVCyrw"
-      ]
-    ],
-    "practice": [
-      [
-        "Dynamic Programming Questions",
-        "Sanfoundry",
-        "https://www.sanfoundry.com/data-structure-questions-answers-dynamic-programming/"
-      ]
-    ],
-    "books": [],
-        "chapters": [
+    {
+        id: "cs315",
+        code: "CS315",
+        name: "تحليل وتصميم خوارزميات",
+        en: "Algorithms Analysis & Design",
+
+        resources: [
+            [
+                "قناة شرح 1",
+                "YouTube Playlist",
+                "https://youtube.com/playlist?list=PLwCMLs3sjOY6KH-8c9F-lMWn-r02hyoV_&si=BoUDgvricjmh5zJi"
+            ],
+            [
+                "قناة شرح 2",
+                "YouTube Playlist",
+                "https://youtube.com/playlist?list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O&si=5gsB_RPO36g4p-IW"
+            ],
+            [
+                "قناة شرح 3",
+                "YouTube Playlist",
+                "https://youtube.com/playlist?list=PLdo5W4Nhv31bbKJzrsKfMpo_grxuLl8LU&si=zAiakTOjjMQ6gin5"
+            ],
+            [
+                "قناة شرح 4",
+                "YouTube Playlist",
+                "https://youtube.com/playlist?list=PLF8OvnCBlEY3a1pbPrE6fvNuV3qi-6KRf&si=l-WLQDS3cGII7SLm"
+            ],
+            [
+                "Huffman Code",
+                "شرح موضوع محدد",
+                "https://youtu.be/B3y0RsVCyrw"
+            ]
+        ],
+
+        practice: [
+            [
+                "Dynamic Programming Questions",
+                "Sanfoundry",
+                "https://www.sanfoundry.com/data-structure-questions-answers-dynamic-programming/"
+            ]
+        ],
+
+        books: [],
+
+        chapters: [
             [
                 "Lecture 1 — Analysis of Algorithms",
                 "file/cs315/chapters/Lecture 1 cs315  Analysis of Algorithms1.pptx"
@@ -55,20 +59,20 @@ const COURSES = [
             [
                 "Lecture 4 — Dynamic prog",
                 "file/cs315/chapters/Lecture 4 cs315  Dynamic prog - Tagged.pdf"
-            ]
-            ,
+            ],
             [
-                "Lecture 5 — Greedy algorithms Huffman ",
+                "Lecture 5 — Greedy algorithms Huffman",
                 "file/cs315/chapters/Lecture 5 cs315 Greedy algorithms Huffman - Tagged.pdf"
-            ]
-            ,
+            ],
             [
-                "Lecture 6&7 — B-Tree ",
+                "Lecture 6&7 — B-Tree",
                 "file/cs315/chapters/Lecture 6 & 7 cs315  B-Tree - Tagged.pdf"
             ]
         ],
-    "files": [],
-        "exams": [
+
+        files: [],
+
+        exams: [
             [
                 "Midterm 442",
                 "file/cs315/exams/ميد الهاجري ٤٤٢.pdf"
@@ -82,1033 +86,862 @@ const COURSES = [
                 "file/cs315/exams/Mid CS315 -472-.pdf"
             ]
         ]
-  },
-  {
-    "id": "cs383",
-    "code": "CS383",
-    "name": "هندسة برمجيات",
-    "en": "Software Engineering",
-    "resources": [
-      [
-        "قناة شرح",
-        "YouTube Playlist",
-        "https://youtube.com/playlist?list=PL08ef9eJxtJZvt5BOsT46vN6kWnflVKH4&si=gbp0u0AFr8Dbrvaj"
-      ],
-      [
-        "شرح الحويكم",
-        "Telegram",
-        "https://t.me/+dCOYt5Z-D9lkOTNk"
-      ],
-      [
-        "قناة شرح إضافية 1",
-        "YouTube Playlist",
-        "https://youtube.com/playlist?list=PLquXYvvn8Qk-Yb-ytydSIePeSwTtQmPSX&si=cySurMdDJKXW4uaH"
-      ],
-      [
-        "قناة شرح إضافية 2",
-        "YouTube Playlist",
-        "https://youtube.com/playlist?list=PL4wcbehZRFq9i7lpYj4YBnlZaRmeoEyvg&si=a0efFMksUL1IfLYn"
-      ]
-    ],
-    "practice": [
-      [
-        "أسئلة للتدريب",
-        "Telegram",
-        "https://t.me/+WJlZm2M-Z3ZhYTI0"
-      ]
-    ],
-    "books": [],
-      chapters: [
-          ["Lecture 1", "Software Engineering", "file/cs383/chapters/CS383Lecture1.pdf"],
-          ["Lecture 2", "Software Engineering", "file/cs383/chapters/CS383Lecture2.pdf"],
-          ["Lecture 3", "Software Engineering", "file/cs383/chapters/CS383Lecture3.pdf"],
-          ["Lecture 4", "Software Engineering", "file/cs383/chapters/CS383Lecture4.pdf"],
-          ["Lecture 5", "Software Engineering", "file/cs383/chapters/CS383Lecture5.pdf"],
-          ["Lecture 6", "Software Engineering", "file/cs383/chapters/CS383Lecture6.pdf"],
-          ["Lecture 7", "Software Engineering", "file/cs383/chapters/CS383Lecture7.pdf"],
-          ["Lecture 8", "Software Engineering", "file/cs383/chapters/CS383Lecture8.pdf"],
-          ["Lecture 9", "Software Engineering", "file/cs383/chapters/CS383Lecture9.pdf"],
-          ["Lecture 10", "Software Engineering", "file/cs383/chapters/CS383Lecture10.pdf"],
-          ["Lecture 11", "Software Engineering", "file/cs383/chapters/CS383Lecture11.pdf"],
-          ["Lecture 12", "Software Engineering", "file/cs383/chapters/CS383Lecture12.pdf"],
-          ["Lecture 13", "Software Engineering", "file/cs383/chapters/CS383Lecture13.pdf"],
-          ["Lecture 14", "Software Engineering", "file/cs383/chapters/CS383Lecture14.pdf"],
-          ["Lecture 14 Solutions", "Solutions", "file/cs383/chapters/CS383Lecture14Solutions.pdf"],
-          ["Lecture 15", "Software Engineering", "file/cs383/chapters/CS383Lecture15.pdf"],
-          ["Lecture 16", "Software Engineering", "file/cs383/chapters/CS383Lecture16.pdf"],
-          ["Lecture 17", "Software Engineering", "file/cs383/chapters/CS383Lecture17.pdf"],
-          ["Lecture 18", "Software Engineering", "file/cs383/chapters/CS383Lecture18.pdf"],
-          ["Lecture 19", "Software Engineering", "file/cs383/chapters/CS383Lecture19.pdf"],
-          ["Lecture 20", "Software Engineering", "file/cs383/chapters/CS383Lecture20.pdf"]
-      ],
-    "files": [],
-      exams: [
-          ["Mid 461 - Solved", "نموذج ميد محلول", "file/cs383/exams/ميد هندسة برمجيات ٤٦١ محلول.pdf"],
-          [
-              "Midterm 451",
-              "file/cs383/exams/mid 451 - هندسة برمجيات .pdf"
-          ],
-          ["Mid CS383 - 462", "نموذج ميد", "file/cs383/exams/MidCS383-462.pdf"],
-          ["Mid 471", "نموذج ميد", "file/cs383/exams/ميد هندسة 471.pdf"],
-          [
-              "Midterm 471 — Solution",
-              "file/cs383/exams/_⁨ميد هندسة 471 محلول .pdf"
-          ]
-      ],
-  },
-  {
-    "id": "math329",
-    "code": "MATH329",
-    "name": "بحوث العمليات",
-    "en": "Operations Research",
-      "resources": [
-          [
-              "شرح د.هشام",
-              "YouTube",
-              "https://youtu.be/5y-oFYGP5SI?si=SOn6CP0PGnr3wEGw"
-          ],
-          
-      [
-        "شرح المنسق",
-        "Telegram",
-        "https://t.me/+S2ijRgsO_s1hZmVk"
-      ],
-      [
-        "Chapter 1 — Graphic Method",
-        "YouTube",
-        "https://youtu.be/TARtHK4I1wY?si=TRzUrWCA6jnmUTNz"
-      ],
-      [
-        "Chapter 2 — Simplex Method",
-        "YouTube",
-        "https://youtu.be/wQWQ8Sza0Tk?si=Pd081Zdx7PG5mMnw"
-      ],
-      [
-        "Chapter 3 — Simplex Sensitivity Analysis",
-        "YouTube",
-        "https://youtu.be/BjTfC_X9luE?si=3kekvBZ9RCmCoUOq3"
-      ],
-      [
-        "Chapter 3 — شرح إضافي",
-        "YouTube",
-        "https://youtu.be/cghQUe4PtO4?si=TEwSXRfiRYLO1U38"
-      ],
-      [
-        "شرح واضح للـ Simplex",
-        "YouTube",
-        "https://youtu.be/KTubdr0PQQo?si=ZnwPfTR6cPBYxwAk"
-      ],
-      [
-        "Chapter 4 — Simplex Method",
-        "YouTube",
-        "https://youtu.be/1WFQNnoOcEE?si=oRjiuAoQA8DaLKis"
-      ],
-      [
-        "NAI — Lecture 8 & 9",
-        "Lecture 8 غير كامل",
-        "https://youtu.be/0X99aiph5GQ?si=O4-u6sO_Fokkwh4G"
-      ],
-      [
-        "سلايدات سابقة",
-        "Telegram",
-        "https://t.me/COC_7_moves/15/404"
-      ]
-    ],
-      "practice": [[
-          "ملخص نظري",
-          "Telegram",
-          "https://t.me/COC_7_moves/15/603?single" ],
-      [
-          "ملخص ",
-          "Telegram",
-          "https://t.me/COC_7_moves/15/720"],
-      [
-      "مراجعة جزئية الميد",
-      "Telegram",
-      "https://t.me/COC_7_moves/15/1021"]
-      ],
-    "books": [],
-      "chapters": [
-          [
-              "Lecture 01",
-              "file/math329/chapters/Lecture01.pdf"
-          ],
-          [
-              "Lecture 02",
-              "file/math329/chapters/Lecture02.pdf"
-          ],
-          [
-              "Lecture 03",
-              "file/math329/chapters/Lecture03.pdf"
-          ],
-          [
-              "Lecture 04",
-              "file/math329/chapters/Lecture04.pdf"
-          ],
-          [
-              "Lecture 05",
-              "file/math329/chapters/Lecture05.pdf"
-          ],
-          [
-              "Lecture 06",
-              "file/math329/chapters/Lecture06.pdf"
-          ]
-      ],
-    "files": [],
-      "exams": [
-          [
-              "Midterm 441",
-              "file/math329/exams/MID - 441 - MATH329 (1).pdf"
-          ],
-          [
-              "Midterm 451",
-              "file/math329/exams/Mid Exam term-451-Math329.pdf.pdf"
-          ],
-          [
-              "Midterm 461",
-              "file/math329/exams/mid 461 -بحوث العمليات .pdf"
-          ],
-          [
-              "Midterm 462",
-              "file/math329/exams/mid 462 Solution-بحوث العمليات .pdf"
-          ],
-          [
-              "Midterm 472",
-              "file/math329/exams/Mid 472 MATH329 (2).pdf"
-          ]
-      ]
+    },
 
-  },
-  {
-    "id": "math317",
-    "code": "MATH317",
-    "name": "الطرق العددية",
-    "en": "Numerical Methods",
-      "resources": [
-          [
-              "شرح د.ابراهيم",
-              "YouTube",
-              "https://youtu.be/lbmxnPxmu5E?si=hGpO-4wHFVgJI_fc"
-          ],
-      [
-        "قناة شرح 1",
-        "YouTube Playlist",
-        "https://youtube.com/playlist?list=PLDea8VeK4MUTOBXLpvx_WKtVrMkojEh52&si=V867T5FvwuCF4oFk"
-      ],
-      [
-        "قناة شرح 2",
-        "YouTube Playlist",
-        "https://youtube.com/playlist?list=PLjiyR6nPcbxyRhkr9CcTEhFZ9lgBlh5wL&si=sZzLIrJ_K27FrdjP"
-      ],
-      [
-        "شرح المنسق",
-        "YouTube Playlist",
-        "https://youtube.com/playlist?list=PL6AeCiRN7e8u_NwJqmDsKOzTllIbnawmq&si=KVrXtoTS9qFJDWEy"
-      ],
-      [
-        "Significant Figures",
-        "Topic",
-        "https://youtu.be/Gn97hpEkTiM?si=pnBTt3DP9Dd-fwq7"
-      ],
-      [
-        "Horner Method / Nested Multiplication",
-        "Topic",
-        "https://youtu.be/Z393AcN_Gz0?si=hlUkvTqP7wSG5P7E"
-      ],
-      [
-        "Taylor",
-        "Topic",
-        "https://youtu.be/LDBnS4c7YbA?si=1085gwgTBFse0KbH"
-      ],
-      [
-        "Taylor — شرح ثاني",
-        "Topic",
-        "https://youtu.be/TFZRk3LgVX0?si=Z4ozDVhytw7kJwCG"
-      ],
-      [
-        "Floating Point",
-        "Topic",
-        "https://youtu.be/bbkcEiUjehk?si=vznDZcpNTqtshQKr"
-      ],
-      [
-        "Bisection Method",
-        "Topic",
-        "https://youtu.be/Yza1bglOxWE?si=kwLDCoPpdRERyMg8"
-      ],
-      [
-        "False Position Method",
-        "Topic",
-        "https://youtu.be/5DklmSXfDL0?si=X8ePrkc19IzmQ6rE"
-      ],
-      [
-        "سلايدات سابقة",
-        "Telegram",
-        "https://t.me/COC_7_moves/22/424"
-      ]
-    ],
-    "books": [
-      [
-        "كتاب المادة",
-        "Telegram",
-        "https://t.me/COC_7_moves/22/456"
-      ]
-    ],
-      "practice": [
-          [
-              "مراجعة شاملة",
-              "Telegram",
-              "https://t.me/COC_7_moves/22/906"
-          ],
-          [
-          "مراجعة 2",
-          "Telegram",
-          "https://t.me/COC_7_moves/22/716"
-          ]
-      ],
-      "chapters": [
-          [
-              "Lecture 01 — Course Overview",
-              "file/math317/chapters/Numerical Methods TXTBook.pdf"
-          ],
-          [
-              "Numerical Methods TXTBook",
-              "file/math317/chapters/Lec1_Course_Overview.pdf"
-          ],
-          [
-              "Lecture 02 — Preliminary Remarks",
-              "file/math317/chapters/Lec2_Preliminary Remarks.pdf"
-          ],
-          [
-              "Lecture 03 — Review of Taylor Series",
-              "file/math317/chapters/Lec3_Review of Taylor Series.pdf"
-          ],
-          [
-              "Lecture 04 — Floating-Point Representation and Errors",
-              "file/math317/chapters/Lec4_Floating-Point Representation and Errors.pdf"
-          ],
-          [
-              "Lecture 05 — Locating Roots of Equations",
-              "file/math317/chapters/Lec5_Locating Roots of Equations 2.pdf"
-          ]
-      ],
-    "files": [],
-      "exams": [
-          [
-              "Midterm 451",
-              "file/math317/exams/Math-317.pdf"
-          ],
-          [
-              "Midterm 461",
-              "file/math317/exams/Mid math317 461.pdf"
-          ],
-          [
-              "Midterm 462",
-              "file/math317/exams/MidMath317 462.pdf"
-          ],
-          [
-              "Midterm 471",
-              "file/math317/exams/M317 471.pdf"
-          ],
-          [
-              "Midterm 472",
-              "file/math317/exams/M317 472.pdf"
-          ]
-      ]
-  },
-  {
-    "id": "cs342",
-    "code": "CS342",
-    "name": "برمجة مرئية",
-    "en": "Visual Programming",
-    "resources": [
-      [
-        "قناة شرح",
-        "YouTube Playlist",
-        "https://youtube.com/playlist?list=PLnzqK5HvcpwRhWDkdkM4jSTPW3CgxKH8G&si=EWVXpBtQhpsaWvBD"
-      ],
-      [
-        "أساسيات Java",
-        "YouTube Playlist",
-        "https://youtube.com/playlist?list=PLZPZq0r_RZOOj_NOZYq_R2PECIMglLemc&si=WA241vZFgGzQiraH"
-      ],
-      [
-        "Full Java Course",
-        "أساسيات Java أكثر من شرح مباشر للمادة",
-        "https://youtu.be/xTtL8E4LzTQ?si=6C63EmNXO9aWFHO-"
-      ],
-      [
-        "Java OOP — Bro Code",
-        "OOP Playlist",
-        "https://youtube.com/playlist?list=PLxuuH5GnCIlcGnesYMkGQOqokyI2Fwu3g&si=-TTxisF-mgL9bT7q"
-      ],
-      [
-        "Intro to Java GUI",
-        "مفيد من Lab 2 وما بعده",
-        "https://youtube.com/playlist?list=PLNb_-KeTZieW3DNI2aLOAYBnjx29CN8dT&si=CSOfqcIzGQvm5YzM"
-      ],
-      [
-        "Java GUI",
-        "YouTube",
-        "https://youtu.be/Kmgo00avvEw?si=cs8fBZREhsq-7avV"
-      ],
-      [
-        "Telegram Resource",
-        "Telegram",
-        "https://t.me/ELAFCS/74"
-      ],
-      [
-        "سلايدات سابقة",
-        "Telegram",
-        "https://t.me/COC_7_moves/19/321"
-      ]
-    ],
-    "practice": [],
-    "books": [],
-     "chapters": [
-          [
-              "Chapter 1",
-              "file/cs342/chapters/chapter1.pptx"
-         ], 
-         [
-             "chaper 2-5 - Tagged.pdf",
-             "file/cs342/chapters/chaper 2-5 - Tagged.pdf"
-         ], 
-          [
-              "Code 01 — TestHoliday",
-              "file/cs342/chapters/اكواد د.هادية/TestHoliday.txt"
-          ],
-          [
-              "Code 02 — class Movie",
-              "file/cs342/chapters/اكواد د.هادية/class Movie.txt"
-          ],
-          [
-              "Code 03 — class testMovie",
-              "file/cs342/chapters/اكواد د.هادية/class testMovie.txt"
-          ],
-          [
-              "Code 04 — Holiday",
-              "file/cs342/chapters/اكواد د.هادية/Holiday.txt"
-          ]
-      ],
-    "files": [],
-      "exams": [
-          [
-              "Midterm 461",
-              "file/cs342/exams/ميد البرمجة المرئية 461💗.pdf"
-          ],
-          [
-              "Midterm 462",
-              "file/cs342/exams/Mid CS 342 - 462.pdf"
-          ],
-          [
-              "Midterm 471",
-              "file/cs342/exams/_⁨ميد برمجة مرئية 471 ⁩.pdf"
-          ],
-          [
-              "Midterm 471 — Solution",
-              "file/cs342/exams/mid 471 ( محلول ) .pdf"
-          ],
-          [
-              "كود مراجعة د. هادية",
-              "file/cs342/exams/ميد البرمجة المرئية 461💗.pdf"
-          ]
-      ]
-  },
-  {
-    "id": "course6",
-    "code": "CS341",
-    "name": "الرسم بالحاسب",
-    "en": "Computer Graphics",
-      "resources": [
-          [
-              "Bresenham Line Algorithm",
-              "مصادر شرح الرسم",
-              "https://youtu.be/NXRFn1XzB9M?si=4L3exjoiL7epIQIp"
-          ],
-          [
-              "Bresenham Circle Algorithm",
-              "مصادر شرح الرسم",
-              "https://youtu.be/o6EEDMIA1eY?si=E3R84xgtxpyZbHzc"
-          ],
-          [
-              "Mid-Point Circle",
-              "مصادر شرح الرسم",
-              "https://youtu.be/devTqI6x4hY?si=sZtGC6jTj3YsAZ_o"
-          ],
-          [
-              "Geometric Transformations — Part 1",
-              "مصادر شرح الرسم",
-              "https://youtu.be/fQvVfpUm0rA?si=9ts5VlLbZHCAlhPU"
-          ],
-          [
-              "Geometric Transformations — Part 2",
-              "مصادر شرح الرسم",
-              "https://youtu.be/cfWkO9urN8k?si=9HX_uJxUgWGx3XJm"
-          ],
-          [
-              "Geometric Transformations — Part 3",
-              "مصادر شرح الرسم",
-              "https://youtu.be/IPlKEMY1Ffw?si=zci8RM88wJxrlBqj"
-          ]
-      ],
-    "practice": [],
-    "coming": false,
-    "books": [],
-      "chapters": [
-          [
-              "1 Introduction_Updated.pdf",
-              "file/cs341/chapters/1 Introduction_Updated.pdf"
-          ],
-          [
-              "Chapter 1 - Overview of Graphics Systems (2).pdf",
-          "file/cs341/chapters/Chapter 1 - Overview of Graphics Systems (2).pdf"
-      ],
-          [
-              "Chapter 2 - Color Models.pdf",
-              "file/cs341/chapters/Chapter 2 - Color Models.pdf"
-          ],
-          [
-              "Chapter 3 - Vector Tools 1.pdf",
-              "file/cs341/chapters/Chapter 3 - Vector Tools 1.pdf"
-          ]
+    {
+        id: "cs383",
+        code: "CS383",
+        name: "هندسة برمجيات",
+        en: "Software Engineering",
 
-      ],
-    "files": [],
-      "exams": [
-          [
-              "Midterm 461",
-              "file/cs341/exams/Mid 461 - CS341.pdf"
-          ],
-          [
-              "Midterm 462",
-              "file/cs341/exams/ميد رسم بالحاسب 462.pdf"
-          ],
-          [
-              "Midterm 472",
-              "file/cs341/exams/CS341 MID -472-.pdf"
-          ]
-      ]
-  }
+        resources: [
+            [
+                "قناة شرح",
+                "YouTube Playlist",
+                "https://youtube.com/playlist?list=PL08ef9eJxtJZvt5BOsT46vN6kWnflVKH4&si=gbp0u0AFr8Dbrvaj"
+            ],
+            [
+                "شرح الحويكم",
+                "Telegram",
+                "https://t.me/+dCOYt5Z-D9lkOTNk"
+            ],
+            [
+                "قناة شرح إضافية 1",
+                "YouTube Playlist",
+                "https://youtube.com/playlist?list=PLquXYvvn8Qk-Yb-ytydSIePeSwTtQmPSX&si=cySurMdDJKXW4uaH"
+            ],
+            [
+                "قناة شرح إضافية 2",
+                "YouTube Playlist",
+                "https://youtube.com/playlist?list=PL4wcbehZRFq9i7lpYj4YBnlZaRmeoEyvg&si=a0efFMksUL1IfLYn"
+            ]
+        ],
+
+        practice: [
+            [
+                "أسئلة للتدريب",
+                "Telegram",
+                "https://t.me/+WJlZm2M-Z3ZhYTI0"
+            ]
+        ],
+
+        books: [],
+
+        chapters: [
+            ["Lecture 1", "Software Engineering", "file/cs383/chapters/CS383Lecture1.pdf"],
+            ["Lecture 2", "Software Engineering", "file/cs383/chapters/CS383Lecture2.pdf"],
+            ["Lecture 3", "Software Engineering", "file/cs383/chapters/CS383Lecture3.pdf"],
+            ["Lecture 4", "Software Engineering", "file/cs383/chapters/CS383Lecture4.pdf"],
+            ["Lecture 5", "Software Engineering", "file/cs383/chapters/CS383Lecture5.pdf"],
+            ["Lecture 6", "Software Engineering", "file/cs383/chapters/CS383Lecture6.pdf"],
+            ["Lecture 7", "Software Engineering", "file/cs383/chapters/CS383Lecture7.pdf"],
+            ["Lecture 8", "Software Engineering", "file/cs383/chapters/CS383Lecture8.pdf"],
+            ["Lecture 9", "Software Engineering", "file/cs383/chapters/CS383Lecture9.pdf"],
+            ["Lecture 10", "Software Engineering", "file/cs383/chapters/CS383Lecture10.pdf"],
+            ["Lecture 11", "Software Engineering", "file/cs383/chapters/CS383Lecture11.pdf"],
+            ["Lecture 12", "Software Engineering", "file/cs383/chapters/CS383Lecture12.pdf"],
+            ["Lecture 13", "Software Engineering", "file/cs383/chapters/CS383Lecture13.pdf"],
+            ["Lecture 14", "Software Engineering", "file/cs383/chapters/CS383Lecture14.pdf"],
+            ["Lecture 14 Solutions", "Solutions", "file/cs383/chapters/CS383Lecture14Solutions.pdf"],
+            ["Lecture 15", "Software Engineering", "file/cs383/chapters/CS383Lecture15.pdf"],
+            ["Lecture 16", "Software Engineering", "file/cs383/chapters/CS383Lecture16.pdf"],
+            ["Lecture 17", "Software Engineering", "file/cs383/chapters/CS383Lecture17.pdf"],
+            ["Lecture 18", "Software Engineering", "file/cs383/chapters/CS383Lecture18.pdf"],
+            ["Lecture 19", "Software Engineering", "file/cs383/chapters/CS383Lecture19.pdf"],
+            ["Lecture 20", "Software Engineering", "file/cs383/chapters/CS383Lecture20.pdf"]
+        ],
+
+        files: [],
+
+        exams: [
+            [
+                "Mid 461 - Solved",
+                "نموذج ميد محلول",
+                "file/cs383/exams/ميد هندسة برمجيات ٤٦١ محلول.pdf"
+            ],
+            [
+                "Midterm 451",
+                "file/cs383/exams/mid 451 - هندسة برمجيات .pdf"
+            ],
+            [
+                "Mid CS383 - 462",
+                "نموذج ميد",
+                "file/cs383/exams/MidCS383-462.pdf"
+            ],
+            [
+                "Mid 471",
+                "نموذج ميد",
+                "file/cs383/exams/ميد هندسة 471.pdf"
+            ],
+            [
+                "Midterm 471 — Solution",
+                "file/cs383/exams/_⁨ميد هندسة 471 محلول .pdf"
+            ]
+        ]
+    },
+
+    {
+        id: "math329",
+        code: "MATH329",
+        name: "بحوث العمليات",
+        en: "Operations Research",
+
+        resources: [
+            [
+                "شرح د.هشام",
+                "YouTube",
+                "https://youtu.be/5y-oFYGP5SI?si=SOn6CP0PGnr3wEGw"
+            ],
+            [
+                "شرح المنسق",
+                "Telegram",
+                "https://t.me/+S2ijRgsO_s1hZmVk"
+            ],
+            [
+                "Chapter 1 — Graphic Method",
+                "YouTube",
+                "https://youtu.be/TARtHK4I1wY?si=TRzUrWCA6jnmUTNz"
+            ],
+            [
+                "Chapter 2 — Simplex Method",
+                "YouTube",
+                "https://youtu.be/wQWQ8Sza0Tk?si=Pd081Zdx7PG5mMnw"
+            ],
+            [
+                "Chapter 3 — Simplex Sensitivity Analysis",
+                "YouTube",
+                "https://youtu.be/BjTfC_X9luE?si=3kekvBZ9RCmCoUOq3"
+            ],
+            [
+                "Chapter 3 — شرح إضافي",
+                "YouTube",
+                "https://youtu.be/cghQUe4PtO4?si=TEwSXRfiRYLO1U38"
+            ],
+            [
+                "شرح واضح للـ Simplex",
+                "YouTube",
+                "https://youtu.be/KTubdr0PQQo?si=ZnwPfTR6cPBYxwAk"
+            ],
+            [
+                "Chapter 4 — Simplex Method",
+                "YouTube",
+                "https://youtu.be/1WFQNnoOcEE?si=oRjiuAoQA8DaLKis"
+            ],
+            [
+                "NAI — Lecture 8 & 9",
+                "Lecture 8 غير كامل",
+                "https://youtu.be/0X99aiph5GQ?si=O4-u6sO_Fokkwh4G"
+            ],
+            [
+                "سلايدات سابقة",
+                "Telegram",
+                "https://t.me/COC_7_moves/15/404"
+            ]
+        ],
+
+        practice: [
+            [
+                "ملخص نظري",
+                "Telegram",
+                "https://t.me/COC_7_moves/15/603?single"
+            ],
+            [
+                "ملخص",
+                "Telegram",
+                "https://t.me/COC_7_moves/15/720"
+            ],
+            [
+                "مراجعة جزئية الميد",
+                "Telegram",
+                "https://t.me/COC_7_moves/15/1021"
+            ]
+        ],
+
+        books: [],
+
+        chapters: [
+            [
+                "Lecture 01",
+                "file/math329/chapters/Lecture01.pdf"
+            ],
+            [
+                "Lecture 02",
+                "file/math329/chapters/Lecture02.pdf"
+            ],
+            [
+                "Lecture 03",
+                "file/math329/chapters/Lecture03.pdf"
+            ],
+            [
+                "Lecture 04",
+                "file/math329/chapters/Lecture04.pdf"
+            ],
+            [
+                "Lecture 05",
+                "file/math329/chapters/Lecture05.pdf"
+            ],
+            [
+                "Lecture 06",
+                "file/math329/chapters/Lecture06.pdf"
+            ]
+        ],
+
+        files: [],
+
+        exams: [
+            [
+                "Midterm 441",
+                "file/math329/exams/MID - 441 - MATH329 (1).pdf"
+            ],
+            [
+                "Midterm 451",
+                "file/math329/exams/Mid Exam term-451-Math329.pdf.pdf"
+            ],
+            [
+                "Midterm 461",
+                "file/math329/exams/mid 461 -بحوث العمليات .pdf"
+            ],
+            [
+                "Midterm 462",
+                "file/math329/exams/mid 462 Solution-بحوث العمليات .pdf"
+            ],
+            [
+                "Midterm 472",
+                "file/math329/exams/Mid 472 MATH329 (2).pdf"
+            ]
+        ]
+    },
+    {
+        id: "math317",
+        code: "MATH317",
+        name: "الطرق العددية",
+        en: "Numerical Methods",
+
+        resources: [
+            [
+                "شرح د.ابراهيم",
+                "YouTube",
+                "https://youtu.be/lbmxnPxmu5E?si=hGpO-4wHFVgJI_fc"
+            ],
+            [
+                "قناة شرح 1",
+                "YouTube Playlist",
+                "https://youtube.com/playlist?list=PLDea8VeK4MUTOBXLpvx_WKtVrMkojEh52&si=V867T5FvwuCF4oFk"
+            ],
+            [
+                "قناة شرح 2",
+                "YouTube Playlist",
+                "https://youtube.com/playlist?list=PLjiyR6nPcbxyRhkr9CcTEhFZ9lgBlh5wL&si=sZzLIrJ_K27FrdjP"
+            ],
+            [
+                "شرح المنسق",
+                "YouTube Playlist",
+                "https://youtube.com/playlist?list=PL6AeCiRN7e8u_NwJqmDsKOzTllIbnawmq&si=KVrXtoTS9qFJDWEy"
+            ],
+            [
+                "Significant Figures",
+                "Topic",
+                "https://youtu.be/Gn97hpEkTiM?si=pnBTt3DP9Dd-fwq7"
+            ],
+            [
+                "Horner Method / Nested Multiplication",
+                "Topic",
+                "https://youtu.be/Z393AcN_Gz0?si=hlUkvTqP7wSG5P7E"
+            ],
+            [
+                "Taylor",
+                "Topic",
+                "https://youtu.be/LDBnS4c7YbA?si=1085gwgTBFse0KbH"
+            ],
+            [
+                "Taylor — شرح ثاني",
+                "Topic",
+                "https://youtu.be/TFZRk3LgVX0?si=Z4ozDVhytw7kJwCG"
+            ],
+            [
+                "Floating Point",
+                "Topic",
+                "https://youtu.be/bbkcEiUjehk?si=vznDZcpNTqtshQKr"
+            ],
+            [
+                "Bisection Method",
+                "Topic",
+                "https://youtu.be/Yza1bglOxWE?si=kwLDCoPpdRERyMg8"
+            ],
+            [
+                "False Position Method",
+                "Topic",
+                "https://youtu.be/5DklmSXfDL0?si=X8ePrkc19IzmQ6rE"
+            ],
+            [
+                "سلايدات سابقة",
+                "Telegram",
+                "https://t.me/COC_7_moves/22/424"
+            ]
+        ],
+
+        books: [
+            [
+                "كتاب المادة",
+                "Telegram",
+                "https://t.me/COC_7_moves/22/456"
+            ]
+        ],
+
+        practice: [
+            [
+                "مراجعة شاملة",
+                "Telegram",
+                "https://t.me/COC_7_moves/22/906"
+            ],
+            [
+                "مراجعة 2",
+                "Telegram",
+                "https://t.me/COC_7_moves/22/716"
+            ]
+        ],
+
+        chapters: [
+            [
+                "Lecture 01 — Course Overview",
+                "file/math317/chapters/Numerical Methods TXTBook.pdf"
+            ],
+            [
+                "Numerical Methods TXTBook",
+                "file/math317/chapters/Lec1_Course_Overview.pdf"
+            ],
+            [
+                "Lecture 02 — Preliminary Remarks",
+                "file/math317/chapters/Lec2_Preliminary Remarks.pdf"
+            ],
+            [
+                "Lecture 03 — Review of Taylor Series",
+                "file/math317/chapters/Lec3_Review of Taylor Series.pdf"
+            ],
+            [
+                "Lecture 04 — Floating-Point Representation and Errors",
+                "file/math317/chapters/Lec4_Floating-Point Representation and Errors.pdf"
+            ],
+            [
+                "Lecture 05 — Locating Roots of Equations",
+                "file/math317/chapters/Lec5_Locating Roots of Equations 2.pdf"
+            ]
+        ],
+
+        files: [],
+
+        exams: [
+            [
+                "Midterm 451",
+                "file/math317/exams/Math-317.pdf"
+            ],
+            [
+                "Midterm 461",
+                "file/math317/exams/Mid math317 461.pdf"
+            ],
+            [
+                "Midterm 462",
+                "file/math317/exams/MidMath317 462.pdf"
+            ],
+            [
+                "Midterm 471",
+                "file/math317/exams/M317 471.pdf"
+            ],
+            [
+                "Midterm 472",
+                "file/math317/exams/M317 472.pdf"
+            ]
+        ]
+    },
+
+    {
+        id: "cs342",
+        code: "CS342",
+        name: "برمجة مرئية",
+        en: "Visual Programming",
+
+        resources: [
+            [
+                "قناة شرح",
+                "YouTube Playlist",
+                "https://youtube.com/playlist?list=PLnzqK5HvcpwRhWDkdkM4jSTPW3CgxKH8G&si=EWVXpBtQhpsaWvBD"
+            ],
+            [
+                "أساسيات Java",
+                "YouTube Playlist",
+                "https://youtube.com/playlist?list=PLZPZq0r_RZOOj_NOZYq_R2PECIMglLemc&si=WA241vZFgGzQiraH"
+            ],
+            [
+                "Full Java Course",
+                "أساسيات Java أكثر من شرح مباشر للمادة",
+                "https://youtu.be/xTtL8E4LzTQ?si=6C63EmNXO9aWFHO-"
+            ],
+            [
+                "Java OOP — Bro Code",
+                "OOP Playlist",
+                "https://youtube.com/playlist?list=PLxuuH5GnCIlcGnesYMkGQOqokyI2Fwu3g&si=-TTxisF-mgL9bT7q"
+            ],
+            [
+                "Intro to Java GUI",
+                "مفيد من Lab 2 وما بعده",
+                "https://youtube.com/playlist?list=PLNb_-KeTZieW3DNI2aLOAYBnjx29CN8dT&si=CSOfqcIzGQvm5YzM"
+            ],
+            [
+                "Java GUI",
+                "YouTube",
+                "https://youtu.be/Kmgo00avvEw?si=cs8fBZREhsq-7avV"
+            ],
+            [
+                "Telegram Resource",
+                "Telegram",
+                "https://t.me/ELAFCS/74"
+            ],
+            [
+                "سلايدات سابقة",
+                "Telegram",
+                "https://t.me/COC_7_moves/19/321"
+            ]
+        ],
+
+        practice: [],
+        books: [],
+
+        chapters: [
+            [
+                "Chapter 1",
+                "file/cs342/chapters/chapter1.pptx"
+            ],
+            [
+                "chaper 2-5 - Tagged.pdf",
+                "file/cs342/chapters/chaper 2-5 - Tagged.pdf"
+            ],
+            [
+                "Code 01 — TestHoliday",
+                "file/cs342/chapters/اكواد د.هادية/TestHoliday.txt"
+            ],
+            [
+                "Code 02 — class Movie",
+                "file/cs342/chapters/اكواد د.هادية/class Movie.txt"
+            ],
+            [
+                "Code 03 — class testMovie",
+                "file/cs342/chapters/اكواد د.هادية/class testMovie.txt"
+            ],
+            [
+                "Code 04 — Holiday",
+                "file/cs342/chapters/اكواد د.هادية/Holiday.txt"
+            ]
+        ],
+
+        files: [],
+
+        exams: [
+            [
+                "Midterm 461",
+                "file/cs342/exams/ميد البرمجة المرئية 461💗.pdf"
+            ],
+            [
+                "Midterm 462",
+                "file/cs342/exams/Mid CS 342 - 462.pdf"
+            ],
+            [
+                "Midterm 471",
+                "file/cs342/exams/_⁨ميد برمجة مرئية 471 ⁩.pdf"
+            ],
+            [
+                "Midterm 471 — Solution",
+                "file/cs342/exams/mid 471 ( محلول ) .pdf"
+            ],
+            [
+                "كود مراجعة د. هادية",
+                "file/cs342/exams/ميد البرمجة المرئية 461💗.pdf"
+            ]
+        ]
+    },
+
+    {
+        id: "course6",
+        code: "CS341",
+        name: "الرسم بالحاسب",
+        en: "Computer Graphics",
+
+        resources: [
+            [
+                "Bresenham Line Algorithm",
+                "مصادر شرح الرسم",
+                "https://youtu.be/NXRFn1XzB9M?si=4L3exjoiL7epIQIp"
+            ],
+            [
+                "Bresenham Circle Algorithm",
+                "مصادر شرح الرسم",
+                "https://youtu.be/o6EEDMIA1eY?si=E3R84xgtxpyZbHzc"
+            ],
+            [
+                "Mid-Point Circle",
+                "مصادر شرح الرسم",
+                "https://youtu.be/devTqI6x4hY?si=sZtGC6jTj3YsAZ_o"
+            ],
+            [
+                "Geometric Transformations — Part 1",
+                "مصادر شرح الرسم",
+                "https://youtu.be/fQvVfpUm0rA?si=9ts5VlLbZHCAlhPU"
+            ],
+            [
+                "Geometric Transformations — Part 2",
+                "مصادر شرح الرسم",
+                "https://youtu.be/cfWkO9urN8k?si=9HX_uJxUgWGx3XJm"
+            ],
+            [
+                "Geometric Transformations — Part 3",
+                "مصادر شرح الرسم",
+                "https://youtu.be/IPlKEMY1Ffw?si=zci8RM88wJxrlBqj"
+            ]
+        ],
+
+        practice: [],
+        coming: false,
+        books: [],
+
+        chapters: [
+            [
+                "1 Introduction_Updated.pdf",
+                "file/cs341/chapters/1 Introduction_Updated.pdf"
+            ],
+            [
+                "Chapter 1 - Overview of Graphics Systems (2).pdf",
+                "file/cs341/chapters/Chapter 1 - Overview of Graphics Systems (2).pdf"
+            ],
+            [
+                "Chapter 2 - Color Models.pdf",
+                "file/cs341/chapters/Chapter 2 - Color Models.pdf"
+            ],
+            [
+                "Chapter 3 - Vector Tools 1.pdf",
+                "file/cs341/chapters/Chapter 3 - Vector Tools 1.pdf"
+            ]
+        ],
+
+        files: [],
+
+        exams: [
+            [
+                "Midterm 461",
+                "file/cs341/exams/Mid 461 - CS341.pdf"
+            ],
+            [
+                "Midterm 462",
+                "file/cs341/exams/ميد رسم بالحاسب 462.pdf"
+            ],
+            [
+                "Midterm 472",
+                "file/cs341/exams/CS341 MID -472-.pdf"
+            ]
+        ]
+    }
 ];
-const app=document.querySelector("#app");
-function searchable(c){return [c.code,c.name,c.en,...c.resources.flat(),...c.practice.flat(),...c.books.flat()].join(" ").toLowerCase()}
+// ====================================
+// APP
+// ====================================
+
+const app = document.querySelector("#app");
+
+function searchable(c) {
+    return [
+        c.code,
+        c.name,
+        c.en,
+        ...c.resources.flat(),
+        ...c.practice.flat(),
+        ...c.books.flat()
+    ].join(" ").toLowerCase();
+}
+
+
+// ====================================
+// HOME PAGE
+// ====================================
+
 function home() {
-    document.title = "دليلك للمستولى السابع";
 
-    app.innerHTML = `<section class="hero"><div class="kicker">LEVEL 07 / ONE PLACE</div><h1>دليلك <em>للمستوى السابع
-    </em></h1><p> </p><div class="search"><span>⌕</span><input
-    id="search" placeholder="ابحث باسم المادة أو رمزها أو أحد المصادر..."></div></section>
-    <section class="exam-shortcuts">
-    <button class="exam-shortcut" id="midtermBtn" type="button">
-        <span class="exam-shortcut-label">الاختبارات النصفية</span>
-        <strong>Midterm exams</strong>
-        <span class="exam-shortcut-action">عرض العد التنازلي ←</span>
-    </button>
+    document.title = "دليلك للمستوى السابع";
 
-<button class="exam-shortcut" id="finalBtn" type="button">
-    <span class="exam-shortcut-label">الاختبارات النهائية</span>
-    <strong>Final Exams</strong>
-    <span class="exam-shortcut-action">عرض العد التنازلي ←</span>
-</button>
+    app.innerHTML = `
+        <section class="hero">
 
-</section><section class="titlebar">
-    <div><small>COURSES</small><h2>مواد المستوى السابع</h2></div><span id="resultCount"></span></section><div id="cards" class="cards"></div>`;
+            <div class="kicker">
+                LEVEL 07 / ONE PLACE
+            </div>
 
-    const cards = document.querySelector("#cards"), q = document.querySelector("#search"), rc = document.querySelector("#resultCount");
+            <h1>
+                دليلك <em>للمستوى السابع</em>
+            </h1>
+
+            <p>
+                كل ما تحتاجينه لمواد المستوى السابع في مكان واحد.
+            </p>
+
+            <div class="search">
+                <span>⌕</span>
+
+                <input
+                    id="search"
+                    type="text"
+                    placeholder="ابحث باسم المادة أو رمزها أو أحد المصادر..."
+                >
+            </div>
+
+        </section>
+
+        <section class="titlebar">
+
+            <div>
+                <small>COURSES</small>
+                <h2>مواد المستوى السابع</h2>
+            </div>
+
+            <span id="resultCount"></span>
+
+        </section>
+
+        <div id="cards" class="cards"></div>
+    `;
+
+    const cards = document.querySelector("#cards");
+    const q = document.querySelector("#search");
+    const rc = document.querySelector("#resultCount");
 
     function draw(list) {
-        rc.textContent = `${list.length}
- مواد`;cards.innerHTML=list.map(c=>{let n=c.resources.length+c.practice.length+c.books.length;return `<a class="course-card" href="#course/${c.id}"><span class="go">↗</span><div class="code">${c.code}</div><h3>${c.name}</h3><p>${c.en}</p><span class="stats"></span><span class="water">${c.code}</span></a>`}).join("")}
+
+        rc.textContent = `${list.length} مواد`;
+
+        cards.innerHTML = list.map(c => `
+            <a class="course-card" href="#course/${c.id}">
+
+                <span class="go">↗</span>
+
+                <div class="code">
+                    ${c.code}
+                </div>
+
+                <h3>${c.name}</h3>
+
+                <p>${c.en}</p>
+
+                <span class="stats"></span>
+
+                <span class="water">
+                    ${c.code}
+                </span>
+
+            </a>
+        `).join("");
+    }
+
     draw(COURSES);
-    document.getElementById("midtermBtn").onclick = () => {
-        location.hash = "#midterms";
+
+    q.oninput = () => {
+
+        const s = q.value.trim().toLowerCase();
+
+        draw(
+            COURSES.filter(c => searchable(c).includes(s))
+        );
     };
-    document.getElementById("finalBtn").onclick = () => {
-        location.hash = "#finals";
-    };
-    q.oninput = () => { let s = q.value.trim().toLowerCase(); draw(COURSES.filter(c => searchable(c).includes(s))) }
 }
-function coursePage(id){
- const c=COURSES.find(x=>x.id===id); if(!c){location.hash="";return}
- document.title=`${c.code} | ${c.name}`;
+
+
+// ====================================
+// COURSE PAGE
+// ====================================
+
+function coursePage(id) {
+
+    const c = COURSES.find(x => x.id === id);
+
+    if (!c) {
+        location.hash = "";
+        home();
+        return;
+    }
+
+    document.title = `${c.code} | ${c.name}`;
+
     const tabs = [
         ["chapters", "📚", "Chapters"],
         ["resources", "🎥", "مصادر الشرح"],
         ["exams", "📝", "النماذج"],
         ["practice", "❓", "أسئلة للتدريب"]
     ];
- const empty=x=>`<div class="empty"><b>${x}</b>سيتم إضافة المحتوى قريبًا.</div>`;
-    const list = (a, t) => a.length
-        ? `<div class="resource-grid">${a.map(r => {
-            const link = r.length === 2 ? r[1] : r[2];
-            const desc = r.length === 2 ? "" : r[1];
 
-            return `<a class="resource" href="${link}" target="_blank" rel="noopener noreferrer">
-            <div>
-                <h3>${r[0]}</h3>
-                ${desc ? `<p>${desc}</p>` : ""}
-            </div>
-            <span class="ext">فتح ↗</span>
-        </a>`;
-        }).join("")}</div>`
-        : empty(t);
-
-    app.innerHTML = `
-    <section class="course-head">
-        <a class="inline-back" href="#">← العودة لكل المواد</a>
-        <div class="course-code">${c.code} / LEVEL 07</div>
-        <h1>${c.name}</h1>
-        <div class="en">${c.en}</div>
-
-        <div class="quick">
-            <span>${c.resources.length} مصادر شرح</span>
-            <span>${c.practice.length} تدريب</span>
-            <span>محتوى يتحدث باستمرار</span>
+    const empty = text => `
+        <div class="empty">
+            <b>${text}</b>
+            <p>سيتم إضافة المحتوى قريبًا.</p>
         </div>
-    </section>
-
-    <nav class="tabs">
-        ${tabs.map((t, i) => `
-            <button class="tab ${i ? "" : "active"}" data-id="${t[0]}">
-                ${t[1]} ${t[2]}
-            </button>
-        `).join("")}
-    </nav>
-
-    <section class="panel active" id="chapters">
-        <div class="panel-title">
-            <i>📚</i>
-            <h2>Chapters</h2>
-        </div>
-
-        ${list(c.chapters, "محتوى الـ Chapters")}
-    </section>
-
-    <section class="panel" id="resources">
-        <div class="panel-title">
-            <i>🎥</i>
-            <h2>مصادر الشرح</h2>
-        </div>
-
-        ${list(c.resources, "مصادر الشرح")}
-    </section>
-
-    <section class="panel" id="exams">
-        <div class="panel-title">
-            <i>📝</i>
-            <h2>النماذج والاختبارات السابقة</h2>
-        </div>
-
-        ${list(c.exams, "نماذج Midterm و Final")}
-    </section>
-
-    <section class="panel" id="practice">
-        <div class="panel-title">
-            <i>❓</i>
-            <h2>أسئلة للتدريب</h2>
-        </div>
-
-        ${list(c.practice, "أسئلة التدريب")}
-    </section>
-`;
-
-    document.querySelectorAll(".tab").forEach(b => b.onclick = () => {
-        document.querySelectorAll(".tab,.panel").forEach(x => x.classList.remove("active"));
-        b.classList.add("active");
-        document.getElementById(b.dataset.id).classList.add("active");
-    });
-}
-// ====================================
-// MIDTERM EXAMS - LEVEL 07
-// ====================================
-
-const MIDTERM_EXAMS = [
-    {
-        code: "MATH317",
-        name: "الطرق العددية",
-        date: "2026-10-25T12:15:00+03:00",
-        displayDate: "الأحد 25 أكتوبر 2026",
-        time: "12:15 مساءً"
-    },
-    {
-        code: "CS383",
-        name: "هندسة البرمجيات",
-        date: "2026-10-27T13:30:00+03:00",
-        displayDate: "الثلاثاء 27 أكتوبر 2026",
-        time: "1:30 مساءً"
-    },
-    {
-        code: "MATH329",
-        name: "بحوث العمليات",
-        date: "2026-10-29T11:00:00+03:00",
-        displayDate: "الخميس 29 أكتوبر 2026",
-        time: "11:00 صباحًا"
-    },
-    {
-        code: "CS341",
-        name: "الرسم بالحاسب",
-        date: "2026-11-02T12:15:00+03:00",
-        displayDate: "الإثنين 2 نوفمبر 2026",
-        time: "12:15 مساءً"
-    },
-    {
-        code: "CS315",
-        name: "تحليل وتصميم خوارزميات",
-        date: "2026-11-04T11:00:00+03:00",
-        displayDate: "الأربعاء 4 نوفمبر 2026",
-        time: "11:00 صباحًا"
-    },
-    {
-        code: "CS342",
-        name: "البرمجة المرئية",
-        date: "2026-11-08T11:00:00+03:00",
-        displayDate: "الأحد 8 نوفمبر 2026",
-        time: "11:00 صباحًا"
-    }
-];
-
-let midtermTimer = null;
-
-function getTimeRemaining(date) {
-    const difference = new Date(date).getTime() - Date.now();
-
-    if (difference <= 0) {
-        return null;
-    }
-
-    return {
-        days: Math.floor(difference / 86400000),
-        hours: Math.floor((difference / 3600000) % 24),
-        minutes: Math.floor((difference / 60000) % 60),
-        seconds: Math.floor((difference / 1000) % 60)
-    };
-}
-
-function formatRemaining(date) {
-    const remaining = getTimeRemaining(date);
-
-    if (!remaining) {
-        return "انتهى الاختبار";
-    }
-
-    return `${remaining.days} يوم، ${remaining.hours} ساعة، ${remaining.minutes} دقيقة`;
-}
-
-function midtermsPage() {
-    document.title = "عداد الميدات | دليلك للفل 7";
-
-    app.innerHTML = `
-        <section class="midterms-page">
-
-            <a href="#" class="inline-back">← العودة للرئيسية</a>
-
-            <div class="midterms-heading">
-                <span class="midterms-eyebrow">LEVEL 07 / 481</span>
-                <h1>العد التنازلي للميدات</h1>
-                <p>تابع الوقت المتبقي لاختبارات منتصف الفصل الدراسي.</p>
-            </div>
-
-            <div class="next-exam-card" id="nextExamCard"></div>
-
-            <div class="midterms-list-heading">
-                <h2>جدول الاختبارات</h2>
-                <span>6 مواد دراسية</span>
-            </div>
-
-            <div class="midterms-list" id="midtermsList">
-                ${MIDTERM_EXAMS.map(exam => `
-                    <div class="midterm-row">
-                        <div class="midterm-info">
-                            <span class="midterm-code">${exam.code}</span>
-                            <h3>${exam.name}</h3>
-                            <p>${exam.displayDate} • ${exam.time}</p>
-                        </div>
-
-                        <div class="midterm-remaining"
-                             data-exam-date="${exam.date}">
-                        </div>
-                    </div>
-                `).join("")}
-            </div>
-
-        </section>
     `;
 
-    updateMidtermCountdown();
+    function list(items, title) {
 
-    clearInterval(midtermTimer);
-    midtermTimer = setInterval(updateMidtermCountdown, 1000);
-}
-
-function updateMidtermCountdown() {
-
-    if (location.hash !== "#midterms") {
-        clearInterval(midtermTimer);
-        midtermTimer = null;
-        return;
-    }
-
-    const nextExam = MIDTERM_EXAMS.find(exam =>
-        new Date(exam.date).getTime() > Date.now()
-    );
-
-    const card = document.getElementById("nextExamCard");
-
-    if (!card) return;
-
-    if (!nextExam) {
-        card.innerHTML = `
-            <div class="exam-completed">
-                <h2>اكتملت اختبارات منتصف الفصل</h2>
-                <p>نتمنى لكم التوفيق والنجاح.</p>
-            </div>
-        `;
-    } else {
-        const remaining = getTimeRemaining(nextExam.date);
-
-        if (!remaining) return;
-
-        const units = [
-            ["الأيام", remaining.days],
-            ["الساعات", remaining.hours],
-            ["الدقائق", remaining.minutes],
-            ["الثواني", remaining.seconds]
-        ];
-
-        card.innerHTML = `
-            <div class="next-exam-label">الاختبار القادم</div>
-
-            <div class="next-exam-details">
-                <div>
-                    <span class="midterm-code">${nextExam.code}</span>
-                    <h2>${nextExam.name}</h2>
-                    <p>${nextExam.displayDate} • ${nextExam.time}</p>
-                </div>
-            </div>
-
-            <div class="countdown-grid">
-                ${units.map(([label, value]) => `
-                    <div class="countdown-unit">
-                        <strong>${String(value).padStart(2, "0")}</strong>
-                        <span>${label}</span>
-                    </div>
-                `).join("")}
-            </div>
-        `;
-    }
-
-    document.querySelectorAll(".midterm-remaining").forEach(element => {
-        element.textContent = formatRemaining(element.dataset.examDate);
-
-        if (!getTimeRemaining(element.dataset.examDate)) {
-            element.classList.add("finished");
+        if (!items || !items.length) {
+            return empty(title);
         }
-    });
-}
-// ====================================
-// FINAL EXAMS - LEVEL 07
-// ====================================
 
-const FINAL_EXAMS = [
-    {
-        code: "CS383",
-        name: "هندسة البرمجيات",
-        date: "2026-12-27T13:00:00+03:00",
-        displayDate: "الأحد 27 ديسمبر 2026",
-        time: "1:00 – 3:00 مساءً"
-    },
-    {
-        code: "MATH329",
-        name: "بحوث العمليات",
-        date: "2026-12-29T08:00:00+03:00",
-        displayDate: "الثلاثاء 29 ديسمبر 2026",
-        time: "8:00 – 10:00 صباحًا"
-    },
-    {
-        code: "CS341",
-        name: "الرسم بالحاسب",
-        date: "2026-12-31T10:30:00+03:00",
-        displayDate: "الخميس 31 ديسمبر 2026",
-        time: "10:30 صباحًا – 12:30 مساءً"
-    },
-    {
-        code: "CS315",
-        name: "تحليل وتصميم الخوارزميات",
-        date: "2027-01-04T08:00:00+03:00",
-        displayDate: "الاثنين 4 يناير 2027",
-        time: "8:00 – 10:00 صباحًا"
-    },
-    {
-        code: "CS342",
-        name: "البرمجة المرئية",
-        date: "2027-01-06T08:00:00+03:00",
-        displayDate: "الأربعاء 6 يناير 2027",
-        time: "8:00 – 10:00 صباحًا"
-    },
-    {
-        code: "MATH317",
-        name: "الطرق العددية",
-        date: "2027-01-07T08:00:00+03:00",
-        displayDate: "الخميس 7 يناير 2027",
-        time: "8:00 – 10:00 صباحًا"
+        return `
+            <div class="resource-grid">
+
+                ${items.map(item => {
+
+            const link = item.length === 2
+                ? item[1]
+                : item[2];
+
+            const desc = item.length === 2
+                ? ""
+                : item[1];
+
+            return `
+                        <a
+                            class="resource"
+                            href="${link}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+
+                            <div>
+                                <h3>${item[0]}</h3>
+
+                                ${desc ? `<p>${desc}</p>` : ""}
+                            </div>
+
+                            <span class="ext">
+                                فتح ↗
+                            </span>
+
+                        </a>
+                    `;
+
+        }).join("")}
+
+            </div>
+        `;
     }
-];
-
-let finalTimer = null;
-// ====================================
-// FINAL EXAMS PAGE
-// ====================================
-
-function finalsPage() {
-
-    document.title = "Final Exams | دليلك للفل 7";
 
     app.innerHTML = `
-        <section class="midterms-page">
+        <section class="course-head">
 
-            <a href="#" class="inline-back">
-                ← العودة للرئيسية
+            <a class="inline-back" href="#">
+                ← العودة لكل المواد
             </a>
 
-            <div class="midterms-heading">
-                <span class="midterms-eyebrow">LEVEL 07 / 481</span>
-                <h1>Final Exams</h1>
-                <p>العد التنازلي للاختبارات النهائية.</p>
+            <div class="course-code">
+                ${c.code} / LEVEL 07
             </div>
 
-            <div class="next-exam-card" id="nextFinalCard"></div>
+            <h1>${c.name}</h1>
 
-            <div class="midterms-list-heading">
-                <h2>جدول الاختبارات النهائية</h2>
-                <span>${FINAL_EXAMS.length} مواد دراسية</span>
+            <div class="en">
+                ${c.en}
             </div>
 
-            <div class="midterms-list">
-
-                ${FINAL_EXAMS.map(exam => `
-                    <div class="midterm-row">
-
-                        <div class="midterm-info">
-                            <span class="midterm-code">${exam.code}</span>
-                            <h3>${exam.name}</h3>
-                            <p>${exam.displayDate} • ${exam.time}</p>
-                        </div>
-
-                        <div
-                            class="midterm-remaining final-remaining"
-                            data-exam-date="${exam.date}">
-                        </div>
-
-                    </div>
-                `).join("")}
-
+            <div class="quick">
+                <span>${c.resources.length} مصادر شرح</span>
+                <span>${c.practice.length} تدريب</span>
+                <span>محتوى يتحدث باستمرار</span>
             </div>
 
         </section>
+
+        <nav class="tabs">
+
+            ${tabs.map((tab, index) => `
+                <button
+                    class="tab ${index === 0 ? "active" : ""}"
+                    data-id="${tab[0]}"
+                    type="button"
+                >
+                    ${tab[1]} ${tab[2]}
+                </button>
+            `).join("")}
+
+        </nav>
+
+        <section class="panel active" id="chapters">
+
+            <div class="panel-title">
+                <i>📚</i>
+                <h2>Chapters</h2>
+            </div>
+
+            ${list(c.chapters, "محتوى الـ Chapters")}
+
+        </section>
+
+        <section class="panel" id="resources">
+
+            <div class="panel-title">
+                <i>🎥</i>
+                <h2>مصادر الشرح</h2>
+            </div>
+
+            ${list(c.resources, "مصادر الشرح")}
+
+        </section>
+
+        <section class="panel" id="exams">
+
+            <div class="panel-title">
+                <i>📝</i>
+                <h2>النماذج والاختبارات السابقة</h2>
+            </div>
+
+            ${list(c.exams, "نماذج الاختبارات السابقة")}
+
+        </section>
+
+        <section class="panel" id="practice">
+
+            <div class="panel-title">
+                <i>❓</i>
+                <h2>أسئلة للتدريب</h2>
+            </div>
+
+            ${list(c.practice, "أسئلة التدريب")}
+
+        </section>
     `;
-}
-// ====================================
-// FINAL EXAMS COUNTDOWN
-// ====================================
 
-function updateFinalCountdown() {
+    // ====================================
+    // TABS ACTIONS
+    // ====================================
 
-    if (location.hash !== "#finals") {
-        clearInterval(finalTimer);
-        finalTimer = null;
-        return;
-    }
+    document.querySelectorAll(".tab").forEach(button => {
 
-    const nextExam = FINAL_EXAMS.find(exam =>
-        new Date(exam.date).getTime() > Date.now()
-    );
+        button.onclick = () => {
 
-    const card = document.getElementById("nextFinalCard");
+            document.querySelectorAll(".tab").forEach(tab => {
+                tab.classList.remove("active");
+            });
 
-    if (!card) return;
+            document.querySelectorAll(".panel").forEach(panel => {
+                panel.classList.remove("active");
+            });
 
-    if (!nextExam) {
-        card.innerHTML = `
-            <div class="exam-completed">
-                <h2>اكتملت الاختبارات النهائية</h2>
-                <p>نتمنى لكم التوفيق والنجاح.</p>
-            </div>
-        `;
-    } else {
+            button.classList.add("active");
 
-        const remaining = getTimeRemaining(nextExam.date);
-
-        if (!remaining) return;
-
-        const units = [
-            ["الأيام", remaining.days],
-            ["الساعات", remaining.hours],
-            ["الدقائق", remaining.minutes],
-            ["الثواني", remaining.seconds]
-        ];
-
-        card.innerHTML = `
-            <div class="next-exam-label">الاختبار القادم</div>
-
-            <div class="next-exam-details">
-                <span class="midterm-code">${nextExam.code}</span>
-                <h2>${nextExam.name}</h2>
-                <p>${nextExam.displayDate} • ${nextExam.time}</p>
-            </div>
-
-            <div class="countdown-grid">
-                ${units.map(([label, value]) => `
-                    <div class="countdown-unit">
-                        <strong>${String(value).padStart(2, "0")}</strong>
-                        <span>${label}</span>
-                    </div>
-                `).join("")}
-            </div>
-     `;
-
-        updateFinalCountdown();
-
-        clearInterval(finalTimer);
-
-        finalTimer = setInterval(updateFinalCountdown, 1000);
-    }
-
-    // تحديث الوقت المتبقي لجميع المواد
-    document.querySelectorAll(".final-remaining").forEach(element => {
-
-        element.textContent = formatRemaining(element.dataset.examDate);
-
-        if (!getTimeRemaining(element.dataset.examDate)) {
-            element.classList.add("finished");
-        } else {
-            element.classList.remove("finished");
-        }
-
+            document
+                .getElementById(button.dataset.id)
+                .classList.add("active");
+        };
     });
 }
+
+
+// ====================================
+// ROUTING
+// ====================================
+
 function route() {
 
-    // إيقاف عداد الميدات عند مغادرة الصفحة
-    clearInterval(midtermTimer);
-    midtermTimer = null;
-
-    // إيقاف عداد الفاينلز عند مغادرة الصفحة
-    clearInterval(finalTimer);
-    finalTimer = null;
-
-    // صفحة الاختبارات النصفية
-    if (location.hash === "#midterms") {
-        midtermsPage();
-        return;
-    }
-
-    // صفحة الاختبارات النهائية
-    if (location.hash === "#finals") {
-        finalsPage();
-        return;
-    }
-
-    // صفحات المواد
     const match = location.hash.match(/^#course\/(.+)$/);
 
     if (match) {
@@ -1118,5 +951,11 @@ function route() {
     }
 }
 
+
+// ====================================
+// START WEBSITE
+// ====================================
+
 addEventListener("hashchange", route);
+
 route();
