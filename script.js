@@ -618,6 +618,10 @@ const COURSES = [
             [
                 "Chapter 3 - Vector Tools 1.pdf",
                 "file/cs341/chapters/Chapter 3 - Vector Tools 1.pdf"
+            ],
+            [
+                "Chapter 3 and 5 - Output Primitives.pdf",
+                "file/cs341/chapters/Chapter 3 and 5 - Output Primitives.pdf"
             ]
         ],
 
@@ -843,12 +847,6 @@ function coursePage(id) {
                 ${c.en}
             </div>
 
-            <div class="quick">
-                <span>${c.resources.length} مصادر شرح</span>
-                <span>${c.practice.length} تدريب</span>
-                <span>محتوى يتحدث باستمرار</span>
-            </div>
-
         </section>
 
         <nav class="tabs">
@@ -931,30 +929,211 @@ function coursePage(id) {
             document
                 .getElementById(button.dataset.id)
                 .classList.add("active");
+
+            animateResources();
         };
     });
 }
 
 
-// ====================================
-// ROUTING
-// ====================================
-
 function route() {
+
+    if (hasGSAP) {
+        gsap.killTweensOf("#app *");
+    }
 
     const match = location.hash.match(/^#course\/(.+)$/);
 
     if (match) {
+
+        document.body.classList.remove("course-mode");
+
         coursePage(match[1]);
+
+        animateCourse();
+
     } else {
+
+        document.body.classList.remove("course-mode");
+
         home();
+
+        animateHome();
     }
+
+    window.scrollTo({
+        top: 0,
+        behavior: "instant"
+    });
 }
 
 
+
+
+
 // ====================================
-// START WEBSITE
+// GSAP ANIMATION SYSTEM
 // ====================================
+
+const hasGSAP = typeof gsap !== "undefined";
+
+if (hasGSAP && typeof ScrollTrigger !== "undefined") {
+    gsap.registerPlugin(ScrollTrigger);
+}
+
+const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+);
+
+function animateHome() {
+
+    if (!hasGSAP || reduceMotion.matches) return;
+
+    gsap.from(".kicker", {
+        y: 25,
+        opacity: 0,
+        duration: 0.7,
+        ease: "power3.out"
+    });
+
+    gsap.from(".hero h1", {
+        y: 70,
+        opacity: 0,
+        duration: 1.1,
+        delay: 0.1,
+        ease: "power4.out"
+    });
+
+    gsap.from(".hero p", {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        delay: 0.35,
+        ease: "power3.out"
+    });
+
+    gsap.from(".search", {
+        y: 35,
+        opacity: 0,
+        duration: 0.8,
+        delay: 0.5,
+        ease: "power3.out"
+    });
+
+    gsap.from(".titlebar", {
+        y: 30,
+        opacity: 0,
+        duration: 0.7,
+        delay: 0.6,
+        ease: "power3.out"
+    });
+
+    gsap.from(".course-card", {
+        y: 75,
+        opacity: 0,
+        rotateX: 8,
+        duration: 0.9,
+        stagger: 0.12,
+        delay: 0.7,
+        ease: "power3.out"
+    });
+
+    setupCardInteractions();
+}
+
+function setupCardInteractions() {
+
+    if (!hasGSAP || reduceMotion.matches) return;
+
+    if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+        return;
+    }
+
+    document.querySelectorAll(".course-card").forEach(card => {
+
+        const rotateX = gsap.quickTo(card, "rotationX", {
+            duration: 0.4,
+            ease: "power3.out"
+        });
+
+        const rotateY = gsap.quickTo(card, "rotationY", {
+            duration: 0.4,
+            ease: "power3.out"
+        });
+
+        card.addEventListener("mousemove", e => {
+
+            const rect = card.getBoundingClientRect();
+
+            const x = (e.clientX - rect.left) / rect.width;
+            const y = (e.clientY - rect.top) / rect.height;
+
+            rotateX((0.5 - y) * 9);
+            rotateY((x - 0.5) * 9);
+
+            card.style.setProperty("--mouse-x", `${x * 100}%`);
+            card.style.setProperty("--mouse-y", `${y * 100}%`);
+        });
+
+        card.addEventListener("mouseleave", () => {
+
+            rotateX(0);
+            rotateY(0);
+
+            card.style.setProperty("--mouse-x", "50%");
+            card.style.setProperty("--mouse-y", "50%");
+        });
+    });
+}
+
+function animateCourse() {
+
+    if (!hasGSAP || reduceMotion.matches) return;
+
+    gsap.from(".course-head > *", {
+        y: 35,
+        opacity: 0,
+        duration: 0.7,
+        stagger: 0.1,
+        ease: "power3.out"
+    });
+
+    gsap.from(".tabs", {
+        y: 20,
+        opacity: 0,
+        duration: 0.6,
+        delay: 0.3,
+        ease: "power3.out"
+    });
+
+    animateResources();
+}
+
+function animateResources() {
+
+    if (!hasGSAP || reduceMotion.matches) return;
+
+    const resources = document.querySelectorAll(
+        ".panel.active .resource"
+    );
+
+    if (!resources.length) return;
+
+    gsap.fromTo(resources,
+        {
+            y: 25,
+            opacity: 0
+        },
+        {
+            y: 0,
+            opacity: 1,
+            duration: 0.55,
+            stagger: 0.055,
+            ease: "power2.out",
+            clearProps: "transform,opacity"
+        }
+    );
+}
 
 addEventListener("hashchange", route);
 
