@@ -622,6 +622,11 @@ const COURSES = [
             [
                 "Chapter 3 and 5 - Output Primitives.pdf",
                 "file/cs341/chapters/Chapter 3 and 5 - Output Primitives.pdf"
+            ],
+            [
+                "Mid Chapters - محدده ",
+                "Telegram",
+                "https://t.me/c/4320957087/274"
             ]
         ],
 
